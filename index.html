@@ -30,7 +30,15 @@
             padding: 2.2rem 2.5rem 2.8rem 2.5rem;
         }
 
-        /* Header */
+        /* Header with photo layout */
+        .header-with-photo {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
         .name-header h1 {
             font-size: 40px;
             font-weight: 700;
@@ -39,6 +47,19 @@
             border-bottom: 2px solid #dce7f0;
             display: inline-block;
             padding-bottom: 6px;
+        }
+
+        .profile-photo {
+            text-align: right;
+        }
+
+        .profile-photo img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #0a2f4d;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         .contact-line {
@@ -75,7 +96,6 @@
         }
 
         /* ===== DARK BLUE BOXES FOR SECTION TITLES ONLY ===== */
-        /* ALL boxes: equal width (280px), equal height (48px), single line, white text, centered vertically */
         .section-title-wrapper {
             margin: 1.8rem 0 1rem 0;
         }
@@ -98,7 +118,7 @@
             line-height: 1.2;
         }
 
-        /* Content styling - NO BACKGROUND, normal dark text */
+        /* Content styling - NO BACKGROUND */
         .summary-plain {
             font-size: 15px;
             line-height: 1.6;
@@ -106,7 +126,6 @@
             color: #1f3243;
         }
 
-        /* Core Expertise grid */
         .expertise-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -133,7 +152,6 @@
             color: #1a4c6e;
         }
 
-        /* Clients Served two column */
         .clients-two {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -155,7 +173,6 @@
             color: #2c7a47;
         }
 
-        /* Education & Certifications grid */
         .edu-cert-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -182,7 +199,6 @@
             color: #1a4c6e;
         }
 
-        /* Responsive */
         @media (max-width: 780px) {
             .resume-inner {
                 padding: 1.5rem;
@@ -201,6 +217,15 @@
                 width: 260px;
                 height: 44px;
                 font-size: 15px;
+            }
+            .header-with-photo {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .profile-photo {
+                text-align: center;
+                margin-top: 10px;
             }
         }
 
@@ -224,10 +249,16 @@
 <div class="resume-card">
     <div class="resume-inner">
         
-        <!-- HEADER -->
-        <div class="name-header">
-            <h1>Jahangir Roni</h1>
+        <!-- HEADER WITH PHOTO -->
+        <div class="header-with-photo">
+            <div class="name-header">
+                <h1>Jahangir R.</h1>
+            </div>
+            <div class="profile-photo">
+                <img src="Capture_Passport.PNG" alt="Jahangir R.">
+            </div>
         </div>
+        
         <div class="contact-line">
             📍 USA – Mason, Ohio • 📞 281-235-5536 • ✉️ <a href="mailto:jahangir.roni01@gmail.com">jahangir.roni01@gmail.com</a> • 🌐 <a href="https://jahangirroni.github.io">jahangirroni.github.io</a>
         </div>
@@ -242,7 +273,7 @@
             AWS Certified DevOps Engineer & Security Specialty professional with <strong>16+ years of experience</strong> delivering enterprise cloud transformation, data modernization, DevOps automation, security compliance, and governance solutions for Fortune 100/500 organizations.
         </div>
 
-        <!-- ===== SECTION 1: SUMMARY (Dark blue box - equal width 280px, equal height 48px) ===== -->
+        <!-- ===== SECTION 1: SUMMARY ===== -->
         <div class="section-title-wrapper">
             <div class="section-title">Summary</div>
         </div>
@@ -253,7 +284,7 @@
             Specialized in cloud migration, enterprise data architecture, ETL/ELT modernization, infrastructure automation, <strong>DevSecOps</strong>, governance, and AI-driven analytics.
         </div>
 
-        <!-- ===== SECTION 2: CORE EXPERTISE (Dark blue box - equal width 280px, equal height 48px) ===== -->
+        <!-- ===== SECTION 2: CORE EXPERTISE ===== -->
         <div class="section-title-wrapper">
             <div class="section-title">Core Expertise</div>
         </div>
@@ -272,7 +303,7 @@
             <li>Technical Leadership, Solution Design & Global Delivery</li>
         </ul>
 
-        <!-- ===== SECTION 3: CLIENTS SERVED (Dark blue box - equal width 280px, equal height 48px) ===== -->
+        <!-- ===== SECTION 3: CLIENTS SERVED ===== -->
         <div class="section-title-wrapper">
             <div class="section-title">Clients Served</div>
         </div>
@@ -293,7 +324,7 @@
             <div class="client-entry">Pratt & Whitney – Azure Migration Consultant</div>
         </div>
 
-        <!-- ===== SECTION 4: EDUCATION & CERTIFICATIONS (Dark blue box - equal width 280px, equal height 48px) ===== -->
+        <!-- ===== SECTION 4: EDUCATION & CERTIFICATIONS ===== -->
         <div class="section-title-wrapper">
             <div class="section-title">Education & Certifications</div>
         </div>
