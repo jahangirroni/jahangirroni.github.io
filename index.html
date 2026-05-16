@@ -74,130 +74,122 @@
             color: #1f313f;
         }
 
-        /* Section titles - outside boxes */
+        /* ===== DARK BLUE BACKGROUND ON SECTION TITLES ONLY (like "Client Serverd" sample) ===== */
         .section-title {
-            font-size: 19px;
+            font-size: 18px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
-            color: #134b6b;
-            border-bottom: 2.5px solid #d4e2ef;
-            padding-bottom: 6px;
-            margin: 1.6rem 0 1rem 0;
-        }
-
-        /* DARK BLUE BACKGROUND BOXES for all 4 sections */
-        .dark-box {
             background-color: #0a2f4d;
-            border-radius: 12px;
-            padding: 18px 22px;
-            margin: 12px 0 10px 0;
             color: #ffffff;
+            padding: 10px 18px;
+            margin: 1.6rem 0 1rem 0;
+            display: inline-block;
+            border-radius: 0px;
         }
 
-        .dark-box .summary-plain,
-        .dark-box .dash-list li,
-        .dark-box .expertise-grid li,
-        .dark-box .clients-two .client-entry,
-        .dark-box .edu-cert-grid li {
-            color: #ffffff;
-        }
-
-        .dark-box .expertise-grid li::before,
-        .dark-box .client-entry::before,
-        .dark-box .edu-cert-grid li::before,
-        .dark-box .dash-list li::before {
-            color: #6ab0de;
-        }
-
-        .dark-box strong {
-            color: #ffd966;
-        }
-
-        /* Summary inside dark box */
-        .dark-box .summary-plain {
+        /* Normal content styling (no background, black/dark text) */
+        .summary-plain {
             font-size: 15px;
-            line-height: 1.55;
-            margin: 8px 0;
-            color: #ffffff;
+            line-height: 1.6;
+            margin: 12px 0 12px 0;
+            color: #1f3243;
         }
 
-        .dark-box .dash-list li {
+        .dash-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .dash-list li {
             font-size: 15px;
+            padding-left: 24px;
+            position: relative;
             margin-bottom: 12px;
+            line-height: 1.55;
+            color: #1f3243;
+        }
+        .dash-list li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #2c7a47;
+            font-weight: 500;
         }
 
-        /* Core Expertise grid inside dark box */
-        .dark-box .expertise-grid {
+        /* Core Expertise grid */
+        .expertise-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 12px 35px;
+            gap: 10px 35px;
             list-style: none;
             padding-left: 0;
             margin-top: 8px;
         }
-        .dark-box .expertise-grid li {
+        .expertise-grid li {
             font-size: 14.5px;
             padding-left: 24px;
             position: relative;
-            margin-bottom: 10px;
+            margin-bottom: 9px;
             line-height: 1.5;
-            color: #ffffff;
+            color: #1f3243;
         }
-        .dark-box .expertise-grid li::before {
+        .expertise-grid li::before {
             content: "—";
             position: absolute;
             left: 0;
-            color: #6ab0de;
+            color: #2c7a47;
+        }
+        .expertise-grid strong {
+            color: #1a4c6e;
         }
 
-        /* Clients Served two column inside dark box */
-        .dark-box .clients-two {
+        /* Clients Served two column */
+        .clients-two {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 10px 40px;
-            margin-top: 6px;
+            gap: 8px 40px;
+            margin-top: 10px;
         }
-        .dark-box .client-entry {
+        .client-entry {
             font-size: 14.5px;
             padding-left: 24px;
             position: relative;
             line-height: 1.5;
-            margin-bottom: 8px;
-            color: #ffffff;
+            margin-bottom: 7px;
+            color: #1f3243;
         }
-        .dark-box .client-entry::before {
+        .client-entry::before {
             content: "—";
             position: absolute;
             left: 0;
-            color: #6ab0de;
+            color: #2c7a47;
         }
 
-        /* Education & Certifications grid inside dark box */
-        .dark-box .edu-cert-grid {
+        /* Education & Certifications grid */
+        .edu-cert-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 12px 35px;
+            gap: 10px 35px;
             list-style: none;
             padding-left: 0;
             margin-top: 8px;
         }
-        .dark-box .edu-cert-grid li {
+        .edu-cert-grid li {
             font-size: 14.5px;
             padding-left: 24px;
             position: relative;
-            margin-bottom: 10px;
+            margin-bottom: 9px;
             line-height: 1.5;
-            color: #ffffff;
+            color: #1f3243;
         }
-        .dark-box .edu-cert-grid li::before {
+        .edu-cert-grid li::before {
             content: "—";
             position: absolute;
             left: 0;
-            color: #6ab0de;
+            color: #2c7a47;
         }
-        .dark-box .edu-cert-grid strong {
-            color: #ffd966;
+        .edu-cert-grid strong {
+            color: #1a4c6e;
         }
 
         /* Responsive */
@@ -205,9 +197,9 @@
             .resume-inner {
                 padding: 1.5rem;
             }
-            .dark-box .expertise-grid,
-            .dark-box .clients-two,
-            .dark-box .edu-cert-grid {
+            .expertise-grid,
+            .clients-two,
+            .edu-cert-grid {
                 grid-template-columns: 1fr;
             }
             .contact-line {
@@ -225,7 +217,7 @@
             .resume-card {
                 box-shadow: none;
             }
-            .dark-box {
+            .section-title {
                 background-color: #0a2f4d;
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
@@ -255,71 +247,63 @@
             AWS Certified DevOps Engineer & Security Specialty professional with <strong>16+ years of experience</strong> delivering enterprise cloud transformation, data modernization, DevOps automation, security compliance, and governance solutions for Fortune 100/500 organizations.
         </div>
 
-        <!-- ===== SECTION 1: SUMMARY (Dark Blue Box) ===== -->
+        <!-- ===== SECTION 1: SUMMARY (Tab only has dark blue background) ===== -->
         <div class="section-title">Summary</div>
-        <div class="dark-box">
-            <div class="summary-plain">
-                Results-driven Cloud Architect and Technical Leader with validated expertise in AWS, Azure, Microsoft Fabric, DevOps, data engineering, and <strong>cloud security (AWS Security Specialty)</strong>. Proven track record designing scalable, secure, and compliant enterprise platforms aligned with <strong>GDPR, HIPAA, and SOC2</strong> frameworks.
-            </div>
-            <div class="summary-plain">
-                Specialized in cloud migration, enterprise data architecture, ETL/ELT modernization, infrastructure automation, <strong>DevSecOps</strong>, governance, and AI-driven analytics.
-            </div>
+        <div class="summary-plain">
+            Results-driven Cloud Architect and Technical Leader with validated expertise in AWS, Azure, Microsoft Fabric, DevOps, data engineering, and <strong>cloud security (AWS Security Specialty)</strong>. Proven track record designing scalable, secure, and compliant enterprise platforms aligned with <strong>GDPR, HIPAA, and SOC2</strong> frameworks.
+        </div>
+        <div class="summary-plain">
+            Specialized in cloud migration, enterprise data architecture, ETL/ELT modernization, infrastructure automation, <strong>DevSecOps</strong>, governance, and AI-driven analytics.
         </div>
 
-        <!-- ===== SECTION 2: CORE EXPERTISE (Dark Blue Box) ===== -->
+        <!-- ===== SECTION 2: CORE EXPERTISE (Tab only has dark blue background) ===== -->
         <div class="section-title">Core Expertise</div>
-        <div class="dark-box">
-            <ul class="expertise-grid">
-                <li>Enterprise Cloud Architecture (AWS, Azure, Microsoft Fabric)</li>
-                <li>Cloud Migration & Infrastructure Modernization</li>
-                <li><strong>AWS DevOps & CI/CD</strong> (CodePipeline, CodeDeploy, Jenkins)</li>
-                <li><strong>Cloud Security & Compliance</strong> (AWS Security, IAM, KMS, WAF)</li>
-                <li>Data Engineering, Lakehouse & Data Warehouse Solutions</li>
-                <li>Snowflake, Redshift, Spark, Hadoop & Databricks</li>
-                <li>ETL / ELT Engineering (Informatica, Talend, AWS Glue, SSIS)</li>
-                <li>Terraform, Kubernetes, Docker, Infrastructure as Code</li>
-                <li>Data Governance, MDM, Data Quality & GRC (GDPR, HIPAA)</li>
-                <li>Power BI, AI-driven Analytics Platforms</li>
-                <li>Enterprise Database Systems (Oracle, SQL Server, PostgreSQL, MongoDB)</li>
-                <li>Technical Leadership, Solution Design & Global Delivery</li>
-            </ul>
-        </div>
+        <ul class="expertise-grid">
+            <li>Enterprise Cloud Architecture (AWS, Azure, Microsoft Fabric)</li>
+            <li>Cloud Migration & Infrastructure Modernization</li>
+            <li><strong>AWS DevOps & CI/CD</strong> (CodePipeline, CodeDeploy, Jenkins)</li>
+            <li><strong>Cloud Security & Compliance</strong> (AWS Security, IAM, KMS, WAF)</li>
+            <li>Data Engineering, Lakehouse & Data Warehouse Solutions</li>
+            <li>Snowflake, Redshift, Spark, Hadoop & Databricks</li>
+            <li>ETL / ELT Engineering (Informatica, Talend, AWS Glue, SSIS)</li>
+            <li>Terraform, Kubernetes, Docker, Infrastructure as Code</li>
+            <li>Data Governance, MDM, Data Quality & GRC (GDPR, HIPAA)</li>
+            <li>Power BI, AI-driven Analytics Platforms</li>
+            <li>Enterprise Database Systems (Oracle, SQL Server, PostgreSQL, MongoDB)</li>
+            <li>Technical Leadership, Solution Design & Global Delivery</li>
+        </ul>
 
-        <!-- ===== SECTION 3: CLIENTS SERVED (Dark Blue Box) ===== -->
+        <!-- ===== SECTION 3: CLIENTS SERVED (Tab only has dark blue background) ===== -->
         <div class="section-title">Clients Served</div>
-        <div class="dark-box">
-            <div class="clients-two">
-                <div class="client-entry">(Confidential) – Power BI & Microsoft Fabric</div>
-                <div class="client-entry">Cognizant – TJX, Massachusetts</div>
-                <div class="client-entry">Informatica Corporation – Multiple Clients</div>
-                <div class="client-entry">KPMG – Data Warehouse Modernization, Montvale NJ</div>
-                <div class="client-entry">Kroger Technology – Data Architect Consultant</div>
-                <div class="client-entry">Hormel Foods – Data Warehouse Modernization</div>
-                <div class="client-entry">Verizon – XO Migration, Data Migration Lead</div>
-                <div class="client-entry">T-Mobile – Lead Data Engineer / ETL Developer</div>
-                <div class="client-entry">Seagate Technology – Lead Informatica Developer</div>
-                <div class="client-entry">Houston ISD – MDM / Data Quality Engineer</div>
-                <div class="client-entry">Key Energy Services – Lead ETL / Informatica Developer</div>
-                <div class="client-entry">Wolters Kluwer – IDQ Developer</div>
-                <div class="client-entry">Honeywell International – ETL Developer</div>
-                <div class="client-entry">Pratt & Whitney – Azure Migration Consultant</div>
-            </div>
+        <div class="clients-two">
+            <div class="client-entry">(Confidential) – Power BI & Microsoft Fabric</div>
+            <div class="client-entry">Cognizant – TJX, Massachusetts</div>
+            <div class="client-entry">Informatica Corporation – Multiple Clients</div>
+            <div class="client-entry">KPMG – Data Warehouse Modernization, Montvale NJ</div>
+            <div class="client-entry">Kroger Technology – Data Architect Consultant</div>
+            <div class="client-entry">Hormel Foods – Data Warehouse Modernization</div>
+            <div class="client-entry">Verizon – XO Migration, Data Migration Lead</div>
+            <div class="client-entry">T-Mobile – Lead Data Engineer / ETL Developer</div>
+            <div class="client-entry">Seagate Technology – Lead Informatica Developer</div>
+            <div class="client-entry">Houston ISD – MDM / Data Quality Engineer</div>
+            <div class="client-entry">Key Energy Services – Lead ETL / Informatica Developer</div>
+            <div class="client-entry">Wolters Kluwer – IDQ Developer</div>
+            <div class="client-entry">Honeywell International – ETL Developer</div>
+            <div class="client-entry">Pratt & Whitney – Azure Migration Consultant</div>
         </div>
 
-        <!-- ===== SECTION 4: EDUCATION & CERTIFICATIONS (Dark Blue Box) ===== -->
+        <!-- ===== SECTION 4: EDUCATION & CERTIFICATIONS (Tab only has dark blue background) ===== -->
         <div class="section-title">Education & Certifications</div>
-        <div class="dark-box">
-            <ul class="edu-cert-grid">
-                <li><strong>🎓 Education:</strong> Master of Science (MS) – Computer Information Systems (CIS)</li>
-                <li><strong>🔐 AWS Certified DevOps Engineer – Professional</strong></li>
-                <li><strong>🔒 AWS Certified Security – Specialty</strong></li>
-                <li><strong>☁️ AWS Certified Solutions Architect – Associate</strong></li>
-                <li><strong>🛡️ CompTIA Security+ Certified</strong></li>
-                <li><strong>❄️ Snowflake SnowPro Core Certified</strong></li>
-                <li><strong>📊 Informatica PowerCenter Data Integrator Certified</strong></li>
-                <li><strong>📋 Informatica Data Quality Specialist Certified</strong></li>
-            </ul>
-        </div>
+        <ul class="edu-cert-grid">
+            <li><strong>🎓 Education:</strong> Master of Science (MS) – Computer Information Systems (CIS)</li>
+            <li><strong>🔐 AWS Certified DevOps Engineer – Professional</strong></li>
+            <li><strong>🔒 AWS Certified Security – Specialty</strong></li>
+            <li><strong>☁️ AWS Certified Solutions Architect – Associate</strong></li>
+            <li><strong>🛡️ CompTIA Security+ Certified</strong></li>
+            <li><strong>❄️ Snowflake SnowPro Core Certified</strong></li>
+            <li><strong>📊 Informatica PowerCenter Data Integrator Certified</strong></li>
+            <li><strong>📋 Informatica Data Quality Specialist Certified</strong></li>
+        </ul>
 
     </div>
 </div>
