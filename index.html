@@ -1,425 +1,347 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Jahangir Roni | Cloud Architect</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Jahangir Roni (Jay) - Technical Lead, Data Engineer, Data Architect</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-font-family:'Inter',sans-serif;
-background:#020617;
-color:white;
-overflow-x:hidden;
-}
+        body {
+            background: #eef2f5;
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+            line-height: 1.45;
+            color: #1a2c3c;
+            padding: 40px 24px;
+        }
 
-.bg-grid{
-background-image:
-linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-background-size:50px 50px;
-}
+        .resume-card {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: #ffffff;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+            border-radius: 0px;
+        }
 
-.glass{
-background:rgba(15,23,42,0.6);
-backdrop-filter:blur(18px);
-border:1px solid rgba(255,255,255,0.08);
-}
+        .resume-inner {
+            padding: 2.2rem 2.5rem 2.5rem 2.5rem;
+        }
 
-.glow{
-position:absolute;
-border-radius:9999px;
-filter:blur(100px);
-opacity:.35;
-}
+        /* Header - exact style as Amir Imad */
+        .name-header h1 {
+            font-size: 38px;
+            font-weight: 700;
+            color: #0a2c3e;
+            letter-spacing: -0.3px;
+            margin: 0 0 12px 0;
+            border-bottom: 2px solid #dce7f0;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
 
-.hero-title{
-line-height:.9;
-letter-spacing:-4px;
-}
+        .contact-strip {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            background: #f9fbfd;
+            padding: 12px 15px;
+            margin: 10px 0 8px 0;
+            border-radius: 12px;
+            border: 1px solid #e2eaf1;
+        }
 
-.gradient-text{
-background:linear-gradient(to right,#22d3ee,#3b82f6,#8b5cf6);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
+        .location {
+            font-size: 13px;
+            font-weight: 500;
+            color: #2c4c6c;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
 
-.nav-blur{
-background:rgba(2,6,23,.6);
-backdrop-filter:blur(20px);
-}
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            font-size: 13px;
+        }
 
-.card-hover:hover{
-transform:translateY(-8px);
-transition:.4s ease;
-border-color:rgba(34,211,238,.4);
-}
+        .contact-links a {
+            color: #1f6e8c;
+            text-decoration: none;
+            border-bottom: 0.5px dotted #b9d0e2;
+        }
 
-.fade-up{
-animation:fadeUp 1s ease forwards;
-opacity:0;
-}
+        .contact-links a:hover {
+            border-bottom: 0.5px solid #1f6e8c;
+        }
 
-@keyframes fadeUp{
-from{opacity:0;transform:translateY(40px)}
-to{opacity:1;transform:translateY(0)}
-}
+        /* Role title - exactly like Strategist, Analyst... */
+        .role-title {
+            font-size: 20px;
+            font-weight: 700;
+            background: #f0f6fc;
+            padding: 12px 18px;
+            margin: 20px 0 16px 0;
+            color: #1d5a7a;
+            border-left: 5px solid #2c7da0;
+            letter-spacing: -0.2px;
+        }
 
-.scroll-line{
-position:absolute;
-left:50%;
-transform:translateX(-50%);
-width:1px;
-height:120px;
-background:linear-gradient(to bottom,transparent,#22d3ee,transparent);
-}
-</style>
+        .desc-text {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 18px;
+            color: #1f313f;
+            background: white;
+            padding: 4px 0;
+        }
+
+        /* Section titles - exact match */
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #134b6b;
+            border-bottom: 2.5px solid #d4e2ef;
+            padding-bottom: 5px;
+            margin: 1.3rem 0 0.9rem 0;
+        }
+
+        /* Dash bullet list (same as original) */
+        .dash-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .dash-list li {
+            font-size: 13.8px;
+            padding-left: 22px;
+            position: relative;
+            margin-bottom: 10px;
+            line-height: 1.48;
+            color: #1f3243;
+        }
+        .dash-list li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #2c7a47;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .summary-plain {
+            font-size: 13.8px;
+            line-height: 1.5;
+            margin: 8px 0 8px 0;
+            color: #1f3243;
+        }
+
+        /* Two column grid for Core Expertise */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px 30px;
+            list-style: none;
+            padding-left: 0;
+            margin-top: 6px;
+        }
+        .expertise-grid li {
+            font-size: 13.5px;
+            padding-left: 22px;
+            position: relative;
+            margin-bottom: 7px;
+            line-height: 1.44;
+        }
+        .expertise-grid li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #2c7a47;
+            font-weight: 500;
+        }
+        .expertise-grid strong {
+            color: #1a4c6e;
+        }
+
+        /* Client Server two column - exact match */
+        .clients-two {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px 35px;
+            margin-top: 8px;
+        }
+        .client-entry {
+            font-size: 13.2px;
+            padding-left: 22px;
+            position: relative;
+            line-height: 1.45;
+            margin-bottom: 5px;
+            break-inside: avoid;
+        }
+        .client-entry::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #2c7a47;
+            font-weight: 500;
+        }
+
+        /* Education row - horizontal items */
+        .education-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px 40px;
+            margin: 12px 0 10px 0;
+            padding: 6px 0;
+        }
+        .edu-item {
+            font-size: 13.5px;
+            font-weight: 500;
+            color: #1a5a7a;
+            padding-left: 22px;
+            position: relative;
+        }
+        .edu-item::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: #2c7a47;
+            font-weight: 700;
+        }
+
+        @media (max-width: 780px) {
+            .resume-inner {
+                padding: 1.5rem;
+            }
+            .contact-strip {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .clients-two, .expertise-grid {
+                grid-template-columns: 1fr;
+            }
+            .education-row {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .name-header h1 {
+                font-size: 30px;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+                margin: 0;
+            }
+            .resume-card {
+                box-shadow: none;
+                max-width: 100%;
+            }
+            .role-title {
+                background: #f5f9fe;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
 </head>
+<body>
+<div class="resume-card">
+    <div class="resume-inner">
+        
+        <!-- HEADER: Name + Contact exactly like Amir Imad -->
+        <div class="name-header">
+            <h1>Jahangir Roni (Jay)</h1>
+        </div>
+        <div class="contact-strip">
+            <span class="location">📍 Mason, OH 45040</span>
+            <div class="contact-links">
+                <span>📞 281-235-5536</span>
+                <span>✉️ <a href="mailto:jroni5143@gmail.com">jroni5143@gmail.com</a></span>
+                <span>🔗 <a href="https://linkedin.com/in/Jroni5143" target="_blank">linkedin.com/in/Jroni5143</a></span>
+                <span>📜 <a href="https://www.credly.com/users/jahangir-roni" target="_blank">credly.com/users/jahangir-roni</a></span>
+            </div>
+        </div>
 
-<body class="bg-grid">
+        <!-- Title Line - matches "Strategist, Analyst, Manager, Solution Architect" -->
+        <div class="role-title">
+            Technical Lead, Data Engineer, Data Architect
+        </div>
 
-<div class="glow w-[500px] h-[500px] bg-cyan-500 top-[-150px] left-[-100px]"></div>
-<div class="glow w-[500px] h-[500px] bg-blue-600 top-[400px] right-[-120px]"></div>
-<div class="glow w-[400px] h-[400px] bg-purple-600 bottom-[0px] left-[20%]"></div>
+        <!-- Intro line - matches "Technology professional with 20+ years..." -->
+        <div class="desc-text">
+            Data professional with 15+ years of experience architecting enterprise data solutions, serving USA-based clients and Fortune 500 companies.<br>
+            Aerospace, Oil & Gas, Retail, Finance, Telecom, and Manufacturing industries.
+        </div>
 
-<!-- NAVBAR -->
-<nav class="fixed top-0 left-0 w-full z-50 nav-blur border-b border-white/5">
-<div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+        <!-- ===== SECTION 1: SUMMARY (exact match to Amir Imad structure) ===== -->
+        <div class="section-title">Summary</div>
+        <ul class="dash-list">
+            <li>Architecting and implementing scalable data architectures, developing robust ETL pipelines, and optimizing data governance frameworks.</li>
+        </ul>
+        <div class="summary-plain">
+            Expert in leveraging cutting-edge technologies, including Snowflake, DBT, Informatica BDM/BDQ, Talend, SSIS, DataStage, AWS Glue, and Azure Data Factory, to enhance performance, efficiency, and data-driven decision-making.
+        </div>
+        <div class="summary-plain">
+            A proven leader in directing high-impact teams, streamlining data processes, and delivering actionable business insights through Power BI and advanced BI solutions.
+        </div>
 
-<div class="font-bold text-xl tracking-wide">
-Jahangir <span class="text-cyan-400">Roni</span>
+        <!-- ===== SECTION 2: CORE EXPERTISE (exact match to Amir Imad Core Expertise) ===== -->
+        <div class="section-title">Core Expertise</div>
+        <ul class="expertise-grid">
+            <li><strong>Cloud & Data Platform Expertise</strong></li>
+            <li><strong>Cloud Migration Strategy</strong></li>
+            <li><strong>Database Systems & Optimization</strong></li>
+            <li><strong>Big Data Technologies</strong></li>
+            <li><strong>Architectural Design & Data Modeling</strong></li>
+            <li><strong>Data Pipeline Orchestration</strong></li>
+            <li>Technical Program and Project Management</li>
+            <li>Advanced ETL Techniques</li>
+            <li>Data Governance & Compliance (GDPR, HIPAA)</li>
+            <li>Agile Methodologies & Sprint Planning</li>
+            <li>DevOps & CI/CD (Jenkins, Docker, Terraform)</li>
+            <li>Data Visualization (Power BI, Tableau)</li>
+        </ul>
+
+        <!-- ===== SECTION 3: CLIENT SERVER (exact match - companies/experience) ===== -->
+        <div class="section-title">Client Server</div>
+        <div class="clients-two">
+            <div class="client-entry">Microsoft Fabric / Power BI (11/2024 – Present)</div>
+            <div class="client-entry">Cognizant – TJX, Massachusetts</div>
+            <div class="client-entry">Informatica – IFSSA (Indiana FSSA)</div>
+            <div class="client-entry">Pratt & Whitney – Azure Migration</div>
+            <div class="client-entry">Kroger Technology – Payroll Integration</div>
+            <div class="client-entry">Hormel Foods – PowerCenter Upgrade</div>
+            <div class="client-entry">Verizon – XO Communications Acquisition</div>
+            <div class="client-entry">T-Mobile – Lead EDW, ETL Developer</div>
+            <div class="client-entry">Seagate Technology – EDW Developer</div>
+            <div class="client-entry">HISD (Houston ISD) – Data Quality Analyst</div>
+            <div class="client-entry">Key Energy Services – Lead ETL Developer</div>
+            <div class="client-entry">Wolters Kluwer – IDQ Developer</div>
+            <div class="client-entry">Honeywell International – ETL Developer</div>
+            <div class="client-entry">Bank of America / Merrill Lynch – NJ</div>
+            <div class="client-entry">DUPONT – Newark DE</div>
+        </div>
+
+        <!-- ===== SECTION 4: EDUCATION (exact match to Amir Imad Education) ===== -->
+        <div class="section-title">Education</div>
+        <div class="education-row">
+            <span class="edu-item">Master of Science in CIS</span>
+            <span class="edu-item">AWS Certified Solutions Architect</span>
+            <span class="edu-item">SnowPro Core Certified</span>
+            <span class="edu-item">Informatica Certified Data Integrator</span>
+        </div>
+
+    </div>
 </div>
-
-<div class="hidden md:flex gap-10 text-sm text-slate-300">
-<a href="#about" class="hover:text-cyan-400 transition">About</a>
-<a href="#experience" class="hover:text-cyan-400 transition">Experience</a>
-<a href="#skills" class="hover:text-cyan-400 transition">Skills</a>
-<a href="#certs" class="hover:text-cyan-400 transition">Certifications</a>
-<a href="#contact" class="hover:text-cyan-400 transition">Contact</a>
-</div>
-
-</div>
-</nav>
-
-<!-- HERO -->
-<section class="relative min-h-screen flex items-center overflow-hidden">
-
-<div class="max-w-7xl mx-auto px-6 w-full relative z-10">
-
-<div class="grid lg:grid-cols-2 gap-20 items-center">
-
-<div class="fade-up">
-
-<p class="uppercase tracking-[0.4em] text-cyan-400 text-sm mb-8">
-Cloud Architect • Data Engineer • DevOps Strategist
-</p>
-
-<h1 class="hero-title text-6xl md:text-8xl lg:text-[9rem] font-black mb-8">
-Jahangir
-<span class="gradient-text block">Roni</span>
-</h1>
-
-<p class="text-slate-300 text-xl leading-10 max-w-2xl mb-10">
-Enterprise Solution Architect and Technical Leader with 16+ years of experience delivering cloud transformation, data engineering, AI analytics, governance, and DevOps modernization solutions for Fortune 100/500 companies.
-</p>
-
-<div class="flex flex-wrap gap-5 mb-12">
-
-<a href="mailto:jroni5143@gmail.com" class="px-8 py-4 rounded-full bg-cyan-400 text-slate-950 font-semibold hover:scale-105 transition">
-Contact Me
-</a>
-
-<a href="https://linkedin.com/in/Jroni5143" target="_blank" class="px-8 py-4 rounded-full glass hover:border-cyan-400 transition">
-LinkedIn
-</a>
-
-</div>
-
-<div class="flex flex-wrap gap-8 text-slate-400 text-sm">
-<span>📍 Mason, Ohio</span>
-<span>☁ AWS • Azure • Snowflake</span>
-<span>📞 281-235-5536</span>
-</div>
-
-</div>
-
-<div class="fade-up relative" style="animation-delay:.3s">
-
-<div class="glass rounded-[40px] p-10 relative overflow-hidden shadow-2xl">
-
-<div class="absolute top-0 right-0 w-60 h-60 bg-cyan-400/10 blur-3xl rounded-full"></div>
-
-<div class="grid grid-cols-2 gap-6 relative z-10">
-
-<div class="glass rounded-3xl p-6 card-hover">
-<h3 class="text-5xl font-black text-cyan-400 mb-3">16+</h3>
-<p class="text-slate-400">Years Experience</p>
-</div>
-
-<div class="glass rounded-3xl p-6 card-hover">
-<h3 class="text-5xl font-black text-cyan-400 mb-3">50+</h3>
-<p class="text-slate-400">Enterprise Projects</p>
-</div>
-
-<div class="glass rounded-3xl p-6 card-hover">
-<h3 class="text-3xl font-black text-cyan-400 mb-3">AWS</h3>
-<p class="text-slate-400">Certified Architect</p>
-</div>
-
-<div class="glass rounded-3xl p-6 card-hover">
-<h3 class="text-3xl font-black text-cyan-400 mb-3">AI</h3>
-<p class="text-slate-400">Modern Analytics</p>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center text-slate-500 text-sm">
-<div class="scroll-line"></div>
-<span class="mt-28">Scroll</span>
-</div>
-
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="py-32 relative">
-<div class="max-w-7xl mx-auto px-6">
-
-<div class="grid lg:grid-cols-2 gap-20 items-center">
-
-<div>
-<p class="text-cyan-400 uppercase tracking-[0.3em] text-sm mb-6">About Me</p>
-
-<h2 class="text-5xl md:text-6xl font-black leading-tight mb-8">
-Building scalable enterprise platforms for the modern cloud era.
-</h2>
-</div>
-
-<div class="text-slate-300 text-lg leading-10 space-y-6">
-<p>
-Results-driven Technical Lead, Data Engineer, Data Architect, and Cloud Security strategist specializing in enterprise cloud modernization, scalable data ecosystems, governance frameworks, and AI-powered analytics.
-</p>
-
-<p>
-Extensive expertise across AWS, Azure, Microsoft Fabric, Snowflake, Informatica, Spark, Talend, Kubernetes, Terraform, and enterprise DevOps platforms.
-</p>
-
-<p>
-Successfully delivered modernization initiatives across telecom, retail, aerospace, healthcare, manufacturing, financial services, and energy sectors.
-</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<!-- EXPERIENCE -->
-<section id="experience" class="py-32 border-y border-white/5 bg-slate-950/60">
-<div class="max-w-7xl mx-auto px-6">
-
-<div class="mb-20">
-<p class="text-cyan-400 uppercase tracking-[0.3em] text-sm mb-6">Experience</p>
-<h2 class="text-5xl md:text-6xl font-black">Selected Projects</h2>
-</div>
-
-<div class="space-y-10">
-
-<div class="glass rounded-[35px] p-10 card-hover">
-<div class="flex flex-col lg:flex-row justify-between mb-8 gap-4">
-<div>
-<h3 class="text-3xl font-bold mb-3">Microsoft Fabric Enterprise Analytics</h3>
-<p class="text-cyan-400">Technical Lead / Data Architect</p>
-</div>
-<span class="text-slate-500">2024 - Present</span>
-</div>
-
-<p class="text-slate-300 leading-9 text-lg">
-Architected a real-time enterprise BI platform using Microsoft Fabric, OneLake, Power BI, and Azure Synapse. Reduced report refresh times by 40% while implementing governance with Microsoft Purview and Entra ID.
-</p>
-</div>
-
-<div class="glass rounded-[35px] p-10 card-hover">
-<div class="flex flex-col lg:flex-row justify-between mb-8 gap-4">
-<div>
-<h3 class="text-3xl font-bold mb-3">TJX Cloud Migration</h3>
-<p class="text-cyan-400">Data Engineer / Technical Manager</p>
-</div>
-<span class="text-slate-500">2022 - 2024</span>
-</div>
-
-<p class="text-slate-300 leading-9 text-lg">
-Led enterprise-scale migration from IBM DataStage to Snowflake and AWS S3 using Talend and Airflow. Designed secure cloud-native architecture with IAM, RBAC, CDC ingestion, and scalable Snowflake clustering.
-</p>
-</div>
-
-<div class="glass rounded-[35px] p-10 card-hover">
-<div class="flex flex-col lg:flex-row justify-between mb-8 gap-4">
-<div>
-<h3 class="text-3xl font-bold mb-3">Informatica Enterprise Programs</h3>
-<p class="text-cyan-400">MDM & Cloud Migration Consultant</p>
-</div>
-<span class="text-slate-500">2019 - 2022</span>
-</div>
-
-<p class="text-slate-300 leading-9 text-lg">
-Delivered enterprise MDM, governance, Azure migration, Hadoop modernization, and data quality frameworks for healthcare, aerospace, and public-sector organizations.
-</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="py-32 relative overflow-hidden">
-<div class="max-w-7xl mx-auto px-6">
-
-<div class="mb-20">
-<p class="text-cyan-400 uppercase tracking-[0.3em] text-sm mb-6">Capabilities</p>
-<h2 class="text-5xl md:text-6xl font-black">Technology Stack</h2>
-</div>
-
-<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-<div class="glass rounded-[30px] p-8 card-hover">
-<h3 class="text-2xl font-bold mb-5">Cloud Platforms</h3>
-<p class="text-slate-400 leading-8">
-AWS, Azure, Microsoft Fabric, EC2, S3, Synapse, Lambda, Data Factory, Azure ML
-</p>
-</div>
-
-<div class="glass rounded-[30px] p-8 card-hover">
-<h3 class="text-2xl font-bold mb-5">Data Engineering</h3>
-<p class="text-slate-400 leading-8">
-Snowflake, Spark, Hadoop, Redshift, Airflow, Databricks, Kafka
-</p>
-</div>
-
-<div class="glass rounded-[30px] p-8 card-hover">
-<h3 class="text-2xl font-bold mb-5">ETL & Integration</h3>
-<p class="text-slate-400 leading-8">
-Informatica, Talend, SSIS, DataStage, AWS Glue, APIs, CDC pipelines
-</p>
-</div>
-
-<div class="glass rounded-[30px] p-8 card-hover">
-<h3 class="text-2xl font-bold mb-5">DevOps</h3>
-<p class="text-slate-400 leading-8">
-Terraform, Docker, Kubernetes, Jenkins, GitHub Actions, Ansible
-</p>
-</div>
-
-<div class="glass rounded-[30px] p-8 card-hover">
-<h3 class="text-2xl font-bold mb-5">Programming</h3>
-<p class="text-slate-400 leading-8">
-Python, Scala, Java, SQL, Bash, Pandas, PySpark
-</p>
-</div>
-
-<div class="glass rounded-[30px] p-8 card-hover">
-<h3 class="text-2xl font-bold mb-5">Analytics</h3>
-<p class="text-slate-400 leading-8">
-Power BI, Tableau, AI Analytics, Azure ML, SageMaker
-</p>
-</div>
-
-</div>
-
-</div>
-</section>
-
-<!-- CERTIFICATIONS -->
-<section id="certs" class="py-32 border-y border-white/5 bg-slate-950/60">
-<div class="max-w-7xl mx-auto px-6">
-
-<div class="mb-20">
-<p class="text-cyan-400 uppercase tracking-[0.3em] text-sm mb-6">Credentials</p>
-<h2 class="text-5xl md:text-6xl font-black">Certifications</h2>
-</div>
-
-<div class="grid md:grid-cols-2 gap-8">
-
-<div class="glass rounded-[30px] p-8 card-hover text-xl">
-AWS Certified DevOps Engineer – Professional
-</div>
-
-<div class="glass rounded-[30px] p-8 card-hover text-xl">
-AWS Certified Security – Specialty
-</div>
-
-<div class="glass rounded-[30px] p-8 card-hover text-xl">
-AWS Certified Solutions Architect – Associate
-</div>
-
-<div class="glass rounded-[30px] p-8 card-hover text-xl">
-Snowflake SnowPro Core Certified
-</div>
-
-<div class="glass rounded-[30px] p-8 card-hover text-xl">
-Informatica Certified PowerCenter Data Integrator
-</div>
-
-<div class="glass rounded-[30px] p-8 card-hover text-xl">
-Informatica Certified Data Quality Specialist
-</div>
-
-</div>
-
-</div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="py-32 relative overflow-hidden">
-<div class="max-w-5xl mx-auto px-6 text-center">
-
-<p class="text-cyan-400 uppercase tracking-[0.3em] text-sm mb-6">Get In Touch</p>
-
-<h2 class="text-5xl md:text-7xl font-black leading-tight mb-10">
-Let's build the next enterprise platform.
-</h2>
-
-<p class="text-slate-400 text-xl leading-10 mb-12 max-w-3xl mx-auto">
-Available for enterprise architecture, cloud modernization, data engineering leadership, and consulting engagements.
-</p>
-
-<div class="flex flex-wrap justify-center gap-6">
-
-<a href="mailto:jroni5143@gmail.com" class="px-10 py-5 rounded-full bg-cyan-400 text-slate-950 font-bold hover:scale-105 transition">
-Email Me
-</a>
-
-<a href="https://linkedin.com/in/Jroni5143" target="_blank" class="px-10 py-5 rounded-full glass hover:border-cyan-400 transition">
-LinkedIn
-</a>
-
-<a href="https://www.credly.com/users/jahangir-roni" target="_blank" class="px-10 py-5 rounded-full glass hover:border-cyan-400 transition">
-Credly
-</a>
-
-</div>
-
-</div>
-</section>
-
-<!-- FOOTER -->
-<footer class="border-t border-white/5 py-10 text-center text-slate-500 text-sm">
-© 2026 Jahangir Roni • Cloud Architect • Data Engineer • DevOps Strategist
-</footer>
-
 </body>
 </html>
