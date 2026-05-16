@@ -1,279 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Amir Imad – Resume</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jahangir R. | DevOps | Solution Architect</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      font-family: 'Segoe UI', Calibri, Arial, sans-serif;
-      font-size: 13px;
-      color: #222;
-      background: #fff;
-      padding: 24px 32px;
-      max-width: 860px;
-      margin: 0 auto;
-    }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.5;
+            background: #e8e8e8;
+            padding: 2rem;
+        }
 
-    .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 6px;
-    }
+        /* Full width container - no box around content */
+        .container {
+            max-width: 100%;
+            background: transparent;
+            padding: 0;
+        }
 
-    .header-left h1 {
-      font-size: 28px;
-      font-weight: 700;
-      color: #c0392b;
-      letter-spacing: 0.5px;
-    }
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
 
-    .header-left .meta {
-      margin-top: 6px;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      font-size: 12.5px;
-      color: #333;
-    }
+        .contact-line {
+            margin: 0.25rem 0;
+            font-size: 0.9rem;
+        }
 
-    .header-left .meta .row {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
+        .contact-line a {
+            color: #0066cc;
+            text-decoration: none;
+        }
 
-    .header-left .meta .row svg {
-      width: 13px;
-      height: 13px;
-      fill: #555;
-      flex-shrink: 0;
-    }
+        hr {
+            margin: 1.2rem 0;
+            border: none;
+            border-top: 1px solid #ccc;
+        }
 
-    .header-left .meta a {
-      color: #1a6fa8;
-      text-decoration: none;
-    }
+        .subtitle {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 0.5rem 0 0.3rem 0;
+        }
 
-    .header-left .meta a:hover { text-decoration: underline; }
+        .experience-text {
+            margin: 0.5rem 0;
+            font-size: 0.9rem;
+        }
 
-    .header-photo {
-      width: 78px;
-      height: 88px;
-      border: 2px solid #ccc;
-      object-fit: cover;
-      flex-shrink: 0;
-    }
+        .section {
+            margin: 1.5rem 0;
+        }
 
-    .tagline {
-      text-align: center;
-      margin: 10px 0 4px;
-      border-top: 1px solid #ccc;
-      border-bottom: 1px solid #ccc;
-      padding: 6px 0;
-    }
+        /* ONLY the section headers have dark blue box */
+        .section h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            background-color: #1e3a5f;
+            color: white;
+            padding: 0.4rem 0.8rem;
+            margin-bottom: 0.8rem;
+            display: inline-block;
+        }
 
-    .tagline .title {
-      font-size: 14px;
-      font-weight: 600;
-      color: #1a6fa8;
-    }
+        .section ul {
+            margin: 0.5rem 0 0.5rem 1.8rem;
+        }
 
-    .tagline .subtitle {
-      font-size: 11.5px;
-      color: #555;
-      margin-top: 3px;
-      line-height: 1.5;
-    }
+        .section li {
+            margin: 0.25rem 0;
+            font-size: 0.9rem;
+        }
 
-    .section-title {
-      background: #1a3a5c;
-      color: #fff;
-      font-size: 13px;
-      font-weight: 600;
-      padding: 5px 10px;
-      margin: 14px 0 0;
-      display: inline-block;
-      min-width: 220px;
-    }
+        .two-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0 3rem;
+        }
 
-    .section-body {
-      border: 1px solid #d0d8e4;
-      background: #f5f8fc;
-      padding: 10px 14px;
-      margin-top: 2px;
-    }
+        .two-columns ul {
+            margin: 0;
+        }
 
-    .summary-body p {
-      font-size: 12.5px;
-      color: #333;
-      line-height: 1.6;
-      margin-bottom: 6px;
-      padding-left: 18px;
-      position: relative;
-    }
-
-    .summary-body p::before {
-      content: '✔';
-      position: absolute;
-      left: 0;
-      color: #2e7d32;
-      font-size: 11px;
-    }
-
-    .summary-body p:last-child { margin-bottom: 0; }
-
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0;
-    }
-
-    .check-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 7px;
-      padding: 5px 6px 5px 0;
-      border-bottom: 1px dashed #c8d6e5;
-      font-size: 12.5px;
-      color: #333;
-      line-height: 1.4;
-    }
-
-    .check-item:last-child { border-bottom: none; }
-
-    .check-item .ck {
-      color: #2e7d32;
-      font-size: 11px;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .two-col .col:last-child .check-item {
-      padding-left: 14px;
-    }
-
-    .col { display: flex; flex-direction: column; }
-  </style>
+        @media (max-width: 700px) {
+            body {
+                padding: 1rem;
+            }
+            .two-columns {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <h1>Jahangir R.</h1>
+        <div class="contact-line">📍 USA - Mason, Ohio</div>
+        <div class="contact-line">📞 281-234-5536 | ✉️ <a href="mailto:jahangir.roni01@gmail.com">jahangir.roni01@gmail.com</a> | 🌐 <a href="https://jahangirroni.github.io">jahangirroni.github.io</a></div>
 
-  <!-- HEADER -->
-  <div class="header">
-    <div class="header-left">
-      <h1>Amir Imad</h1>
-      <div class="meta">
-        <div class="row">
-          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>
-          <span>USA - California, Texas, Connecticut, Virginia, MD, NY, Washington, Ohio</span>
+        <hr>
+
+        <div class="subtitle">DevOps | Data Engineer | Cloud Security | Solution Architect</div>
+        <div class="experience-text">Technology professional with 20+ years of consulting experience, serving USA-based clients and Fortune 100/500 companies.</div>
+
+        <hr>
+
+        <div class="section">
+            <h2>Summary</h2>
+            <ul>
+                <li>Providing expert technical consulting in strategic initiatives, cloud migration, solution design, and product development.</li>
+                <li>Skilled in technical program management, product development, and solution architecture, with a focus on cloud technologies (Azure, AWS, GCP), Artificial Intelligence (AI), Microsoft stack (SharePoint, M365, etc.), infrastructure, application development and modernization, and data governance.</li>
+                <li>A proven leader in aligning IT strategies with business goals and driving operational efficiency across industries.</li>
+            </ul>
         </div>
-        <div class="row">
-          <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1C9.4 21 3 14.6 3 6.5a1 1 0 011-1H8a1 1 0 011 1c0 1.25.2 2.45.57 3.58a1 1 0 01-.25 1.01l-2.7 2.7z"/></svg>
-          <span>281-513-8507</span>
-          <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          <a href="mailto:amirimad@yahoo.com">amirimad@yahoo.com</a>
-          <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm-1 17.93V18a1 1 0 00-1-1H8a2 2 0 01-2-2v-1l-1.93-.97A8.01 8.01 0 014 12a8 8 0 018-8v.07c-.96.2-1.83.67-2.5 1.35A3 3 0 008 8H7a1 1 0 00-1 1v1a1 1 0 001 1h1l2 3v4.93zM16.5 17.7A7.96 7.96 0 0020 12c0-1.44-.38-2.79-1.05-3.96L17 9.5V11a1 1 0 01-1 1h-1v1a1 1 0 01-1 1h-1v2h2a2 2 0 012 2v.7z"/></svg>
-          <a href="http://www.amirimad.com" target="_blank">www.amirimad.com</a>
+
+        <hr>
+
+        <div class="section">
+            <h2>Core Expertise</h2>
+            <div class="two-columns">
+                <ul>
+                    <li><strong>Leadership in Technology Research, Strategy, and Innovation</strong></li>
+                    <li><strong>Solution Design and Architecture</strong></li>
+                    <li><strong>Artificial Intelligence and Machine Learning</strong></li>
+                    <li><strong>Application Modernization</strong></li>
+                    <li><strong>Application Lifecycle Development</strong></li>
+                    <li><strong>Global Team and Stakeholder Management</strong></li>
+                </ul>
+                <ul>
+                    <li>Technical Program and Project Management</li>
+                    <li>FinOps Expertise</li>
+                    <li>Cloud and Infrastructure Management</li>
+                    <li>Infrastructure Automation and Orchestration</li>
+                    <li>Compliance, Governance, and Policy Enforcement</li>
+                </ul>
+            </div>
         </div>
-      </div>
+
+        <hr>
+
+        <div class="section">
+            <h2>Clients Served (Partial List)</h2>
+            <div class="two-columns">
+                <ul>
+                    <li>Molina Healthcare (CA)</li>
+                    <li>KAO International (OH)</li>
+                    <li>Wolters Kluwer (TX)</li>
+                    <li>Virtual Edge (TX)</li>
+                    <li>AIG (TX)</li>
+                    <li>State Transportation Dept. (TX)</li>
+                    <li>JP Morgan Chase (DE & NY)</li>
+                    <li>American Express (AZ)</li>
+                    <li>GE Oil & Gas (TX)</li>
+                    <li>Microsoft (WA)</li>
+                    <li>Ameriprise (MN)</li>
+                    <li>Nordstrom (WA)</li>
+                    <li>Department of Education (NY)</li>
+                </ul>
+                <ul>
+                    <li>Citrix (FL)</li>
+                    <li>Rohde & Schwarz (MD)</li>
+                    <li>Syngenta (CA/Switzerland/Brazil)</li>
+                    <li>Datamatics Consultants Inc (GA)</li>
+                    <li>Cisco (CA)</li>
+                    <li>Compqsoft (TX)</li>
+                    <li>Hitachi (CA)</li>
+                    <li>Palm Inc (CA)</li>
+                    <li>IBM (NY/TX)</li>
+                    <li>Bank of America (Merrill Lynch) (NJ)</li>
+                    <li>Lycos Inc (MA)</li>
+                    <li>DUPONT (DE)</li>
+                </ul>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="section">
+            <h2>Education & Certifications</h2>
+            <ul>
+                <li>Master's Degree in Sciences</li>
+                <li>Associate Degree in Engineering</li>
+                <li>Professional Courses</li>
+                <li>Technology Certified</li>
+            </ul>
+        </div>
     </div>
-    <!-- Replace src="" with your actual photo file path -->
-    <img class="header-photo" src="" alt="Amir Imad" />
-  </div>
-
-  <!-- TAGLINE -->
-  <div class="tagline">
-    <div class="title">Strategist, Analyst, Manager, Solution Architect</div>
-    <div class="subtitle">
-      Technology professional with 20+ years of consulting experience, serving USA-based clients and Fortune 100/500 companies.<br>
-      clients and Fortune 100/500 companies
-    </div>
-  </div>
-
-  <!-- SUMMARY -->
-  <div class="section-title">Summary</div>
-  <div class="section-body summary-body">
-    <p>Providing expert technical consulting in strategic initiatives, cloud migration, solution design, and product development.</p>
-    <p>Skilled in technical program management, product development, and solution architecture, with a focus on cloud technologies (Azure, AWS, GCP), Artificial Intelligence (AI), Microsoft stack (SharePoint, M365, etc.), infrastructure, application development and modernization, and data governance.</p>
-    <p>A proven leader in aligning IT strategies with business goals and driving operational efficiency across industries.</p>
-  </div>
-
-  <!-- CORE EXPERTISE -->
-  <div class="section-title">Core Expertise</div>
-  <div class="section-body">
-    <div class="two-col">
-      <div class="col">
-        <div class="check-item"><span class="ck">✔</span> Leadership in Technology Research, Strategy, and Innovation</div>
-        <div class="check-item"><span class="ck">✔</span> Solution Design and Architecture</div>
-        <div class="check-item"><span class="ck">✔</span> Artificial Intelligence and Machine Learning</div>
-        <div class="check-item"><span class="ck">✔</span> Application Modernization</div>
-        <div class="check-item"><span class="ck">✔</span> Application Lifecycle Development</div>
-        <div class="check-item"><span class="ck">✔</span> Global Team and Stakeholder Management</div>
-      </div>
-      <div class="col">
-        <div class="check-item"><span class="ck">✔</span> Technical Program and Project Management</div>
-        <div class="check-item"><span class="ck">✔</span> FinOps Expertise</div>
-        <div class="check-item"><span class="ck">✔</span> Cloud and Infrastructure Management</div>
-        <div class="check-item"><span class="ck">✔</span> Infrastructure Automation and Orchestration</div>
-        <div class="check-item"><span class="ck">✔</span> Compliance, Governance, and Policy Enforcement</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- CLIENT SERVED -->
-  <div class="section-title">Client Serverd</div>
-  <div class="section-body">
-    <div class="two-col">
-      <div class="col">
-        <div class="check-item"><span class="ck">✔</span> Molina Healthcare, Long Beach, CA</div>
-        <div class="check-item"><span class="ck">✔</span> Wolters Kluwer, Houston TX</div>
-        <div class="check-item"><span class="ck">✔</span> AIG, Houston TX</div>
-        <div class="check-item"><span class="ck">✔</span> JP Morgan Chase, DE &amp; NY</div>
-        <div class="check-item"><span class="ck">✔</span> GE&amp;€"Oil &amp; Gas, Houston TX</div>
-        <div class="check-item"><span class="ck">✔</span> Ameriprise/(American Express), MN</div>
-        <div class="check-item"><span class="ck">✔</span> Department of Education, Albany, NY</div>
-        <div class="check-item"><span class="ck">✔</span> Rohde &amp; Schwarz, Columbia MD</div>
-        <div class="check-item"><span class="ck">✔</span> Datamatics Consultants Inc, Duluth GA</div>
-        <div class="check-item"><span class="ck">✔</span> Compqsoft, Houston TX</div>
-        <div class="check-item"><span class="ck">✔</span> Palm Inc, Silicon Valley, CA</div>
-        <div class="check-item"><span class="ck">✔</span> IBM, Poughkeepsie, NY/ Dallas, TX</div>
-        <div class="check-item"><span class="ck">✔</span> Lycos Inc. Waltham, MA</div>
-      </div>
-      <div class="col">
-        <div class="check-item"><span class="ck">✔</span> KAO International, Cincinnati, OH</div>
-        <div class="check-item"><span class="ck">✔</span> Virtual Edge, Houston TX</div>
-        <div class="check-item"><span class="ck">✔</span> State Transportation Dept., Houston, TX</div>
-        <div class="check-item"><span class="ck">✔</span> American Express, Consultant, Phoenix AZ</div>
-        <div class="check-item"><span class="ck">✔</span> Microsoft, Redmond WA</div>
-        <div class="check-item"><span class="ck">✔</span> Nordstrom: Seattle, Washington</div>
-        <div class="check-item"><span class="ck">✔</span> Citrix, Fort Lauderdale, Florida</div>
-        <div class="check-item"><span class="ck">✔</span> Syngenta, CA/Switzerland/Brazil</div>
-        <div class="check-item"><span class="ck">✔</span> Cisco, San Jose, CA</div>
-        <div class="check-item"><span class="ck">✔</span> Hitachi, Santa Clara, CA</div>
-        <div class="check-item"><span class="ck">✔</span> Microsoft, Redmond WA</div>
-        <div class="check-item"><span class="ck">✔</span> Bank Of America(Merrill Lynch), NJ</div>
-        <div class="check-item"><span class="ck">✔</span> DUPONT, Newark DE</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- EDUCATION -->
-  <div class="section-title">Education</div>
-  <div class="section-body">
-    <div class="two-col">
-      <div class="col">
-        <div class="check-item"><span class="ck">✔</span> Master's Degree in Sciences</div>
-        <div class="check-item"><span class="ck">✔</span> Professional Courses</div>
-      </div>
-      <div class="col">
-        <div class="check-item"><span class="ck">✔</span> Associate Degree in Engineering</div>
-        <div class="check-item"><span class="ck">✔</span> Technology Certified</div>
-      </div>
-    </div>
-  </div>
-
 </body>
 </html>
