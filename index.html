@@ -1,356 +1,353 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <title>Amir Imad | Strategist, Analyst, Solution Architect</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amir Imad - Professional Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    body {
-      background-color: #e2e8f0;   /* soft gray-blue background like professional paper backdrop */
-      font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
-      line-height: 1.45;
-      color: #0f172a;
-      padding: 40px 24px;
-    }
+        body {
+            background: #d1d5db;
+            font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+            line-height: 1.3;
+            padding: 40px 20px;
+        }
 
-    /* main resume card – clean, white, subtle shadow, exactly matching professional layout */
-    .resume {
-      max-width: 1100px;
-      margin: 0 auto;
-      background: white;
-      border-radius: 20px;
-      box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: all 0.2s ease;
-    }
+        /* main paper container matching classic resume width */
+        .paper {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            padding: 35px 40px 40px 40px;
+            border-radius: 2px;
+        }
 
-    /* inner spacing */
-    .resume-inner {
-      padding: 2.5rem 2.8rem;
-    }
+        /* preserve original spacing exactly as per classic layout */
+        .header-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 12px;
+            margin-bottom: 16px;
+        }
 
-    /* HEADER section: name + contact row */
-    .header {
-      border-bottom: 3px solid #1e3a5f;
-      padding-bottom: 1.2rem;
-      margin-bottom: 1.5rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: baseline;
-    }
+        .name {
+            font-size: 38px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            color: #111;
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+        }
 
-    .name-title h1 {
-      font-size: 2.8rem;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      color: #0b2b42;
-      margin-bottom: 0.2rem;
-    }
+        .contact-details {
+            text-align: right;
+            font-size: 11.5px;
+            line-height: 1.45;
+            color: #2c3e50;
+        }
 
-    .contact-info {
-      text-align: right;
-      font-size: 0.9rem;
-      line-height: 1.45;
-      color: #2c3e4e;
-    }
+        .contact-details a {
+            color: #0056b3;
+            text-decoration: none;
+            border-bottom: 0.5px dotted #8ba0b0;
+        }
 
-    .contact-info a {
-      color: #1e5a7d;
-      text-decoration: none;
-      border-bottom: 1px dotted #9bb7d0;
-    }
+        .contact-details a:hover {
+            border-bottom: 0.5px solid;
+        }
 
-    .contact-info a:hover {
-      color: #0e3f5a;
-      border-bottom: 1px solid #0e3f5a;
-    }
+        .address-line {
+            font-size: 11.5px;
+            margin-bottom: 5px;
+            font-weight: 500;
+            white-space: normal;
+        }
 
-    .location {
-      font-size: 0.9rem;
-      margin-bottom: 6px;
-      font-weight: 500;
-    }
+        /* strategist role line (bold headline) */
+        .role-tagline {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1e4663;
+            margin: 12px 0 14px 0;
+            letter-spacing: -0.2px;
+            border-left: 4px solid #2c7da0;
+            padding-left: 14px;
+            background: #f8fafc;
+            padding: 8px 14px;
+            border-radius: 0px 8px 8px 0px;
+        }
 
-    /* tagline / role strip */
-    .strategist-tagline {
-      background: #f0f4f9;
-      padding: 0.9rem 1.2rem;
-      border-radius: 14px;
-      margin-bottom: 1.6rem;
-      font-weight: 600;
-      font-size: 1.25rem;
-      color: #0c4a6e;
-      border-left: 6px solid #2c7da0;
-    }
+        /* two column layout exactly matching "Summary" left + "Core Expertise" right */
+        .two-col-grid {
+            display: flex;
+            gap: 32px;
+            margin: 20px 0 28px 0;
+            flex-wrap: wrap;
+        }
 
-    /* summary & core expertise two column layout */
-    .two-columns {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin-bottom: 2rem;
-    }
+        .summary-col {
+            flex: 1.2;
+            min-width: 220px;
+        }
 
-    .summary-block {
-      flex: 1.2;
-      min-width: 220px;
-    }
+        .expertise-col {
+            flex: 0.9;
+            min-width: 250px;
+        }
 
-    .core-expertise-block {
-      flex: 1;
-      min-width: 240px;
-    }
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #1a4b6e;
+            border-bottom: 2px solid #cfdfed;
+            padding-bottom: 5px;
+            margin-bottom: 14px;
+        }
 
-    .section-title {
-      font-size: 1.25rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: #1e4a76;
-      border-bottom: 2px solid #cbdde9;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-    }
+        .summary-text {
+            font-size: 13.5px;
+            line-height: 1.5;
+            color: #1f2d3d;
+            text-align: justify;
+        }
 
-    .summary-text {
-      font-size: 0.98rem;
-      line-height: 1.5;
-      color: #1e293b;
-      margin-bottom: 0.5rem;
-    }
+        .core-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 12px;
+        }
 
-    .expertise-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem 1rem;
-      list-style: none;
-    }
+        .core-list li {
+            width: calc(50% - 12px);
+            font-size: 12.5px;
+            padding-left: 16px;
+            position: relative;
+            line-height: 1.4;
+            margin-bottom: 4px;
+        }
 
-    .expertise-list li {
-      width: calc(50% - 0.5rem);
-      font-size: 0.9rem;
-      position: relative;
-      padding-left: 1.2rem;
-    }
+        .core-list li::before {
+            content: "•";
+            position: absolute;
+            left: 2px;
+            color: #1e6f5c;
+            font-weight: bold;
+            font-size: 14px;
+        }
 
-    .expertise-list li::before {
-      content: "▹";
-      position: absolute;
-      left: 0;
-      color: #2c7da0;
-      font-weight: 600;
-    }
+        /* Client Server section - two columns exactly preserving all client names */
+        .client-section {
+            margin: 25px 0 18px 0;
+        }
 
-    /* CLIENT SERVER section: two-column grid of client names */
-    .client-section {
-      margin-bottom: 2rem;
-    }
+        .clients-two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px 28px;
+            margin-top: 8px;
+        }
 
-    .clients-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.6rem 1.8rem;
-      margin-top: 0.5rem;
-    }
+        .client-entry {
+            font-size: 12.5px;
+            padding: 4px 0;
+            color: #1e2f3e;
+            border-bottom: 0.5px dotted #e2e8f0;
+        }
 
-    .client-item {
-      font-size: 0.92rem;
-      color: #1e2f3d;
-      padding: 0.2rem 0;
-      border-bottom: 1px dotted #e2edf2;
-    }
+        /* education section - clean row with all items */
+        .education-block {
+            background: #f6f9fe;
+            padding: 14px 20px;
+            margin: 20px 0 10px 0;
+            border-radius: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            border: 1px solid #e4edf5;
+        }
 
-    /* Education row – simple & clean */
-    .education {
-      background: #f8fafc;
-      padding: 1rem 1.4rem;
-      border-radius: 16px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 0.5rem;
-      font-weight: 500;
-    }
+        .edu-item {
+            font-size: 13px;
+            font-weight: 500;
+            color: #0b3b4f;
+            letter-spacing: 0.2px;
+        }
 
-    .edu-item {
-      font-size: 0.95rem;
-      color: #0b3b4f;
-      letter-spacing: 0.2px;
-    }
+        hr {
+            margin: 12px 0 5px;
+            border: 0;
+            height: 0;
+            border-top: 1px solid #e2edf2;
+        }
 
-    hr {
-      margin: 1rem 0;
-      border: none;
-      height: 1px;
-      background: linear-gradient(90deg, #cbd5e1, #eef2ff);
-    }
+        /* additional subtle extra line to keep integrity */
+        .inline-clients {
+            width: 100%;
+        }
 
-    /* fine tune responsive */
-    @media (max-width: 800px) {
-      .resume-inner {
-        padding: 1.5rem;
-      }
-      .header {
-        flex-direction: column;
-        gap: 0.5rem;
-      }
-      .contact-info {
-        text-align: left;
-      }
-      .name-title h1 {
-        font-size: 2rem;
-      }
-      .clients-grid {
-        grid-template-columns: 1fr;
-      }
-      .expertise-list li {
-        width: 100%;
-      }
-    }
+        @media (max-width: 760px) {
+            .paper {
+                padding: 20px;
+            }
+            .header-row {
+                flex-direction: column;
+                gap: 8px;
+            }
+            .contact-details {
+                text-align: left;
+            }
+            .clients-two-column {
+                grid-template-columns: 1fr;
+            }
+            .core-list li {
+                width: 100%;
+            }
+            .two-col-grid {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .education-block {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
 
-    @media print {
-      body {
-        background: white;
-        padding: 0;
-        margin: 0;
-      }
-      .resume {
-        box-shadow: none;
-        border-radius: 0;
-        max-width: 100%;
-      }
-      .strategist-tagline {
-        background: #f3f6fc;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
-      .education {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
-    }
+        /* print optimization for exact match */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+                margin: 0;
+            }
+            .paper {
+                box-shadow: none;
+                padding: 0.4in;
+                max-width: 100%;
+            }
+            .role-tagline {
+                background: #f2f5f8;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .education-block {
+                background: #fafcfd;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
 
-    /* additional subtle extras */
-    .badge-light {
-      font-weight: 500;
-    }
-    a {
-      word-break: break-all;
-    }
-    .footer-note {
-      font-size: 0.7rem;
-      text-align: center;
-      margin-top: 1.2rem;
-      color: #5f7f9e;
-      border-top: 1px solid #eef2f6;
-      padding-top: 1rem;
-    }
-  </style>
+        /* Extra micro-fix for alignment */
+        .no-bullet-margin {
+            margin-top: 0;
+        }
+    </style>
 </head>
 <body>
-<div class="resume">
-  <div class="resume-inner">
-    <!-- HEADER section with name and detailed location / email / web / phone exactly matching given data -->
-    <div class="header">
-      <div class="name-title">
-        <h1>Amir Imad</h1>
-      </div>
-      <div class="contact-info">
-        <div class="location">📍 USA - California, Texas, Connecticut, Virginia, MD, NY, Washington, Ohio</div>
-        <div>📞 281-513-8507 &nbsp;|&nbsp; ✉️ <a href="mailto:amirimad@yahoo.com">amirimad@yahoo.com</a> &nbsp;|&nbsp; 🌐 <a href="http://www.amirimad.com" target="_blank" rel="noopener noreferrer">www.amirimad.com</a></div>
-      </div>
-    </div>
-
-    <!-- Strategist, Analyst, Manager, Solution Architect role title line -->
-    <div class="strategist-tagline">
-      Strategist, Analyst, Manager, Solution Architect
-    </div>
-
-    <!-- Two column layout: Summary | Core Expertise -->
-    <div class="two-columns">
-      <div class="summary-block">
-        <div class="section-title">Summary</div>
-        <div class="summary-text">
-          Technology professional with 20+ years of consulting experience, serving USA-based clients and Fortune 100/500 companies.
-          Providing expert technical consulting in strategic initiatives, cloud migration, solution design, and product development.
-          Skilled in technical program management, product development, and solution architecture, with a focus on cloud technologies (Azure, AWS, GCP), Artificial Intelligence (AI), Microsoft stack (SharePoint, M365, etc.), infrastructure, application development and modernization, and data governance.
-          A proven leader in aligning IT strategies with business goals and driving operational efficiency across industries.
+<div class="paper">
+    <!-- HEADER: full name + states + contacts exactly as provided -->
+    <div class="header-row">
+        <div class="name">Amir Imad</div>
+        <div class="contact-details">
+            <div class="address-line">USA - California, Texas, Connecticut, Virginia, MD, NY, Washington, Ohio</div>
+            <div>281-513-8507 | <a href="mailto:amirimad@yahoo.com">amirimad@yahoo.com</a> | <a href="http://www.amirimad.com" target="_blank">www.amirimad.com</a></div>
         </div>
-      </div>
-      <div class="core-expertise-block">
-        <div class="section-title">Core Expertise</div>
-        <ul class="expertise-list">
-          <li>Leadership in Technology Research, Strategy, and Innovation</li>
-          <li>Solution Design and Architecture</li>
-          <li>Artificial Intelligence and Machine Learning</li>
-          <li>Application Modernization</li>
-          <li>Application Lifecycle Development</li>
-          <li>Global Team and Stakeholder Management</li>
-          <li>Technical Program and Project Management</li>
-          <li>FinOps Expertise</li>
-          <li>Cloud and Infrastructure Management</li>
-          <li>Infrastructure Automation and Orchestration</li>
-          <li>Compliance, Governance, and Policy Enforcement</li>
-        </ul>
-      </div>
     </div>
 
-    <!-- Client Server Section – extensive list based on image content, organized exactly as per data (two columns, all clients preserved) -->
+    <!-- Strategist, Analyst, Manager, Solution Architect title line (100% matching original intent) -->
+    <div class="role-tagline">
+        Strategist, Analyst, Manager, Solution Architect
+    </div>
+
+    <!-- Two column area: Summary (left) / Core Expertise (right) -->
+    <div class="two-col-grid">
+        <!-- left side summary -->
+        <div class="summary-col">
+            <div class="section-title">Summary</div>
+            <div class="summary-text">
+                Technology professional with 20+ years of consulting experience, serving USA-based clients and Fortune 100/500 companies.<br><br>
+                Providing expert technical consulting in strategic initiatives, cloud migration, solution design, and product development.<br><br>
+                Skilled in technical program management, product development, and solution architecture, with a focus on cloud technologies (Azure, AWS, GCP), Artificial Intelligence (AI), Microsoft stack (SharePoint, M365, etc.), infrastructure, application development and modernization, and data governance.<br><br>
+                A proven leader in aligning IT strategies with business goals and driving operational efficiency across industries.
+            </div>
+        </div>
+
+        <!-- right side core expertise - full list matching all items from original -->
+        <div class="expertise-col">
+            <div class="section-title">Core Expertise</div>
+            <ul class="core-list">
+                <li>Leadership in Technology Research, Strategy, and Innovation</li>
+                <li>Solution Design and Architecture</li>
+                <li>Artificial Intelligence and Machine Learning</li>
+                <li>Application Modernization</li>
+                <li>Application Lifecycle Development</li>
+                <li>Global Team and Stakeholder Management</li>
+                <li>Technical Program and Project Management</li>
+                <li>FinOps Expertise</li>
+                <li>Cloud and Infrastructure Management</li>
+                <li>Infrastructure Automation and Orchestration</li>
+                <li>Compliance, Governance, and Policy Enforcement</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- CLIENT SERVER SECTION – 100% matching list with all names, same order and exact text -->
     <div class="client-section">
-      <div class="section-title">Client Server</div>
-      <div class="clients-grid">
-        <!-- left column equivalent: we distribute all clients in natural grid order matching original sequence (preserving all names) -->
-        <div class="client-item">Molina Healthcare, Long Beach, CA</div>
-        <div class="client-item">Wolters Kluwer, Houston TX</div>
-        <div class="client-item">AIG, Houston TX</div>
-        <div class="client-item">JP Morgan Chase, DE &amp; NY</div>
-        <div class="client-item">GE&E*Oil &amp; Gas, Houston TX</div>
-        <div class="client-item">Ameriprise/(American Express), MN</div>
-        <div class="client-item">Department of Education, Albany, NY</div>
-        <div class="client-item">Rohde &amp; Schwarz, Columbia MD</div>
-        <div class="client-item">Datamatics Consultants Inc, Duluth GA</div>
-        <div class="client-item">Compqsoft, Houston TX</div>
-        <div class="client-item">Palm Inc, Silicon Valley, CA</div>
-        <div class="client-item">IBM, Poughkeepsie, NY / Dallas, TX</div>
-        <div class="client-item">Lycos Inc. Waltham, MA</div>
-        <div class="client-item">KAO International, Cincinnati, OH</div>
-        <div class="client-item">Virtual Edge, Houston TX</div>
-        <div class="client-item">State Transportation Dept., Houston, TX</div>
-        <div class="client-item">American Express, Consultant, Phoenix AZ</div>
-        <div class="client-item">Microsoft, Redmond WA</div>
-        <div class="client-item">Nordstrom: Seattle, Washington</div>
-        <div class="client-item">Citrix, Fort Lauderdale, Florida</div>
-        <div class="client-item">Syngenta, CA/Switzerland/Brazil</div>
-        <div class="client-item">Cisco, San Jose, CA</div>
-        <div class="client-item">Hitachi, Santa Clara, CA</div>
-        <div class="client-item">Microsoft, Redmond WA</div>
-        <div class="client-item">Bank Of America (Merrill Lynch), NJ</div>
-        <div class="client-item">DUPONT, Newark DE</div>
-      </div>
-      <!-- subtle note: all clients are listed exactly as provided in the image content; duplicates kept as original -->
+        <div class="section-title">Client Server</div>
+        <div class="clients-two-column">
+            <!-- first column clients (original order, preserving all entries including duplicates) -->
+            <div class="client-entry">Molina Healthcare, Long Beach, CA</div>
+            <div class="client-entry">Wolters Kluwer, Houston TX</div>
+            <div class="client-entry">AIG, Houston TX</div>
+            <div class="client-entry">JP Morgan Chase, DE &amp; NY</div>
+            <div class="client-entry">GE&E*Oil &amp; Gas, Houston TX</div>
+            <div class="client-entry">Ameriprise/(American Express), MN</div>
+            <div class="client-entry">Department of Education, Albany, NY</div>
+            <div class="client-entry">Rohde &amp; Schwarz, Columbia MD</div>
+            <div class="client-entry">Datamatics Consultants Inc, Duluth GA</div>
+            <div class="client-entry">Compqsoft, Houston TX</div>
+            <div class="client-entry">Palm Inc, Silicon Valley, CA</div>
+            <div class="client-entry">IBM, Poughkeepsie, NY / Dallas, TX</div>
+            <div class="client-entry">Lycos Inc. Waltham, MA</div>
+            <div class="client-entry">KAO International, Cincinnati, OH</div>
+            <div class="client-entry">Virtual Edge, Houston TX</div>
+            <div class="client-entry">State Transportation Dept., Houston, TX</div>
+            <div class="client-entry">American Express, Consultant, Phoenix AZ</div>
+            <div class="client-entry">Microsoft, Redmond WA</div>
+            <div class="client-entry">Nordstrom: Seattle, Washington</div>
+            <div class="client-entry">Citrix, Fort Lauderdale, Florida</div>
+            <div class="client-entry">Syngenta, CA/Switzerland/Brazil</div>
+            <div class="client-entry">Cisco, San Jose, CA</div>
+            <div class="client-entry">Hitachi, Santa Clara, CA</div>
+            <div class="client-entry">Microsoft, Redmond WA</div>
+            <div class="client-entry">Bank Of America(Merrill Lynch), NJ</div>
+            <div class="client-entry">DUPONT, Newark DE</div>
+        </div>
     </div>
 
-    <!-- Education Section exactly as described: Master's Degree, Professional Courses, Associate Degree, Certified -->
-    <div class="education">
-      <span class="edu-item">🎓 Master's Degree in Sciences</span>
-      <span class="edu-item">📘 Professional Courses</span>
-      <span class="edu-item">🔧 Associate Degree in Engineering</span>
-      <span class="edu-item">✅ Technology Certified</span>
+    <!-- Education block exactly as per original: Master's Degree, Professional Courses, Associate Degree, Technology Certified -->
+    <div class="education-block">
+        <span class="edu-item">🎓 Master's Degree in Sciences</span>
+        <span class="edu-item">📖 Professional Courses</span>
+        <span class="edu-item">⚙️ Associate Degree in Engineering</span>
+        <span class="edu-item">✅ Technology Certified</span>
     </div>
-    
-    <!-- subtle footer matching the style fidelity, no extraneous content -->
-    <div class="footer-note">
-      ★ 20+ years consulting experience | Fortune 100/500 clients
-    </div>
-  </div>
+
+    <!-- no extra footer distracting, but light separator to keep exactly like professional plain resume -->
+    <hr>
 </div>
 </body>
 </html>
