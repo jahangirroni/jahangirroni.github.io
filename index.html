@@ -1,387 +1,343 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Amir Imad - Strategist, Analyst, Manager, Solution Architect</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jahangir Roni | Cloud Architect & Data Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+      background: #020617;
+    }
 
-        /* 100% background matching the visual style of the original image - clean, professional light backdrop */
-        body {
-            background: #e9ecef;
-            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
-            line-height: 1.45;
-            color: #1a2a3a;
-            padding: 40px 20px;
-        }
+    .glass {
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
 
-        /* main resume container: classic white paper, subtle shadow, exactly like a printed sheet */
-        .resume {
-            max-width: 1050px;
-            margin: 0 auto;
-            background: #ffffff;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            border-radius: 0;
-            overflow: hidden;
-        }
-
-        /* inner spacing preserves readability and matches original dense but clean layout */
-        .resume-content {
-            padding: 2.2rem 2.5rem 2.8rem 2.5rem;
-        }
-
-        /* --- header section: name, location, contacts exactly as image --- */
-        .name-header h1 {
-            font-size: 38px;
-            font-weight: 700;
-            color: #0b2b3b;
-            letter-spacing: -0.3px;
-            margin-bottom: 12px;
-            border-bottom: 2px solid #cfdfed;
-            display: inline-block;
-            padding-bottom: 4px;
-        }
-
-        .contact-bar {
-            margin: 12px 0 6px 0;
-            font-size: 14px;
-            color: #2c3e4e;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: baseline;
-            border-bottom: 1px solid #e2e8f0;
-            padding-bottom: 12px;
-        }
-
-        .location {
-            font-weight: 500;
-            background: #f8fafc;
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 13px;
-        }
-
-        .contact-details {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            font-size: 13.5px;
-        }
-
-        .contact-details a {
-            color: #1e6f5c;
-            text-decoration: none;
-            border-bottom: 0.5px dotted #9bb7d0;
-        }
-
-        .contact-details a:hover {
-            border-bottom: 0.5px solid #1e6f5c;
-        }
-
-        /* role line: Strategist, Analyst, Manager, Solution Architect */
-        .role-headline {
-            font-size: 20px;
-            font-weight: 700;
-            background: #f0f6fa;
-            padding: 12px 20px;
-            margin: 20px 0 18px 0;
-            color: #1a4c6e;
-            border-left: 5px solid #2c7da0;
-            letter-spacing: -0.2px;
-        }
-
-        /* technology professional text exactly as shown */
-        .exp-tagline {
-            font-size: 14.5px;
-            margin-bottom: 20px;
-            color: #1f2f3a;
-            line-height: 1.5;
-            font-weight: 500;
-            background: #ffffff;
-            padding: 4px 0;
-        }
-
-        /* section titles all caps, underlined, same as image style */
-        .section-title {
-            font-size: 18px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-            color: #0f3b5c;
-            border-bottom: 2px solid #d4e2ef;
-            padding-bottom: 6px;
-            margin: 1.5rem 0 0.9rem 0;
-        }
-
-        /* bullet list style: dash/hyphen exactly like original image ( - item ) */
-        .dash-list {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .dash-list li {
-            font-size: 14px;
-            padding-left: 20px;
-            position: relative;
-            margin-bottom: 10px;
-            line-height: 1.45;
-            color: #1f2f3e;
-        }
-
-        .dash-list li::before {
-            content: "—";
-            position: absolute;
-            left: 0;
-            color: #2c7a47;
-            font-weight: 500;
-            font-size: 14px;
-        }
-
-        /* summary specific spacing (the paragraph style but keeping bullet for first line) */
-        .summary-text {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 12px;
-        }
-
-        .summary-bullet-item {
-            margin-bottom: 12px;
-        }
-
-        /* core expertise: split into two columns for better readability matching image's dense layout */
-        .expertise-wrapper {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 6px 32px;
-            list-style: none;
-            padding-left: 0;
-            margin-top: 5px;
-        }
-
-        .expertise-wrapper li {
-            font-size: 13.8px;
-            padding-left: 20px;
-            position: relative;
-            margin-bottom: 8px;
-            line-height: 1.4;
-        }
-
-        .expertise-wrapper li::before {
-            content: "—";
-            position: absolute;
-            left: 0;
-            color: #2c7a47;
-            font-weight: 500;
-        }
-
-        /* client server: two column grid exactly as image shows, each item with dash */
-        .clients-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px 40px;
-            margin-top: 8px;
-        }
-
-        .client-item {
-            font-size: 13.5px;
-            padding-left: 20px;
-            position: relative;
-            line-height: 1.45;
-            margin-bottom: 6px;
-            break-inside: avoid;
-        }
-
-        .client-item::before {
-            content: "—";
-            position: absolute;
-            left: 0;
-            color: #2c7a47;
-            font-weight: 500;
-        }
-
-        /* Education styling: row with dash bullets exactly as per original image (only two items shown in final image) */
-        .education-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 32px;
-            margin: 12px 0 8px 0;
-            padding: 12px 0 4px 0;
-        }
-
-        .edu-item {
-            font-size: 14px;
-            font-weight: 500;
-            color: #1a4b6e;
-            padding-left: 20px;
-            position: relative;
-        }
-
-        .edu-item::before {
-            content: "—";
-            position: absolute;
-            left: 0;
-            color: #2c7a47;
-            font-weight: 700;
-        }
-
-        /* small responsive */
-        @media (max-width: 780px) {
-            .resume-content {
-                padding: 1.5rem;
-            }
-            .contact-bar {
-                flex-direction: column;
-                gap: 8px;
-            }
-            .clients-grid {
-                grid-template-columns: 1fr;
-            }
-            .expertise-wrapper {
-                grid-template-columns: 1fr;
-            }
-            .education-row {
-                flex-direction: column;
-                gap: 12px;
-            }
-            .name-header h1 {
-                font-size: 30px;
-            }
-        }
-
-        /* print optimized for exact replica style */
-        @media print {
-            body {
-                background: white;
-                padding: 0;
-                margin: 0;
-            }
-            .resume {
-                box-shadow: none;
-                max-width: 100%;
-            }
-            .role-headline {
-                background: #f4f8fc;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
-        }
-
-        /* additional micro detail to match exactly image line breaks */
-        .small-note {
-            font-size: 12px;
-            color: #7a8e9e;
-            margin-top: 14px;
-            text-align: center;
-            border-top: 0.5px solid #e9edf2;
-            padding-top: 12px;
-        }
-    </style>
+    .gradient-text {
+      background: linear-gradient(to right, #06b6d4, #3b82f6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  </style>
 </head>
-<body>
-<div class="resume">
-    <div class="resume-content">
-        
-        <!-- header: name and contact block (exact from image) -->
-        <div class="name-header">
-            <h1>Amir Imad</h1>
+<body class="text-white">
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden border-b border-slate-800">
+    <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-purple-500/10 blur-3xl"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6 py-24 lg:py-32">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+        <div>
+          <p class="uppercase tracking-[0.35em] text-cyan-400 text-sm mb-5">
+            Cloud • DevOps • Data Engineering • AI
+          </p>
+
+          <h1 class="text-5xl lg:text-7xl font-black leading-tight mb-6">
+            Jahangir Roni <span class="gradient-text">(Jay)</span>
+          </h1>
+
+          <p class="text-xl text-slate-300 leading-9 mb-8 max-w-2xl">
+            Technical Strategist, Solution Architect, Data Engineer, and Cloud Security professional with 16+ years of experience delivering enterprise modernization, cloud migration, AI analytics, governance, and DevOps solutions for Fortune 100/500 organizations.
+          </p>
+
+          <div class="flex flex-wrap gap-4 mb-8">
+            <a href="tel:2812355536" class="px-6 py-4 rounded-2xl bg-cyan-500 hover:bg-cyan-400 transition font-semibold text-slate-900 shadow-lg shadow-cyan-500/20">
+              📞 281-235-5536
+            </a>
+
+            <a href="mailto:jroni5143@gmail.com" class="px-6 py-4 rounded-2xl border border-slate-700 hover:border-cyan-400 transition">
+              ✉️ Email
+            </a>
+
+            <a href="https://linkedin.com/in/Jroni5143" target="_blank" class="px-6 py-4 rounded-2xl border border-slate-700 hover:border-cyan-400 transition">
+              🔗 LinkedIn
+            </a>
+          </div>
+
+          <div class="flex flex-wrap gap-6 text-slate-400 text-sm">
+            <span>📍 Mason, Ohio, USA</span>
+            <span>🌐 jahangirroni.github.io</span>
+            <span>☁️ AWS • Azure • Snowflake</span>
+          </div>
         </div>
-        <div class="contact-bar">
-            <span class="location">📍 USA - California, Texas, Connecticut, Virginia, MD, NY, Washington, Ohio</span>
-            <div class="contact-details">
-                <span>📞 281-513-8507</span>
-                <span>✉️ <a href="mailto:amirimad@yahoo.com">amirimad@yahoo.com</a></span>
-                <span>🌐 <a href="http://www.amirimad.com" target="_blank">www.amirimad.com</a></span>
+
+        <div class="glass rounded-3xl p-8 shadow-2xl">
+          <div class="grid grid-cols-2 gap-6">
+
+            <div class="bg-slate-900/70 rounded-2xl p-6 border border-slate-800">
+              <h3 class="text-5xl font-black text-cyan-400">16+</h3>
+              <p class="text-slate-400 mt-2">Years Experience</p>
             </div>
+
+            <div class="bg-slate-900/70 rounded-2xl p-6 border border-slate-800">
+              <h3 class="text-5xl font-black text-cyan-400">50+</h3>
+              <p class="text-slate-400 mt-2">Enterprise Projects</p>
+            </div>
+
+            <div class="bg-slate-900/70 rounded-2xl p-6 border border-slate-800">
+              <h3 class="text-4xl font-black text-cyan-400">AWS</h3>
+              <p class="text-slate-400 mt-2">Cloud Certified</p>
+            </div>
+
+            <div class="bg-slate-900/70 rounded-2xl p-6 border border-slate-800">
+              <h3 class="text-4xl font-black text-cyan-400">AI</h3>
+              <p class="text-slate-400 mt-2">Modern Analytics</p>
+            </div>
+
+          </div>
         </div>
 
-        <!-- Strategist, Analyst, Manager, Solution Architect role -->
-        <div class="role-headline">
-            Strategist, Analyst, Manager, Solution Architect
-        </div>
-
-        <!-- technology experience line (exact wording from image) -->
-        <div class="exp-tagline">
-            Technology professional with 20+ years of consulting experience, serving USA-based clients and Fortune 100/500 companies.<br>
-            Clients and Fortune 100/500 companies.
-        </div>
-
-        <!-- Summary section with dash bullets exactly matching -->
-        <div class="section-title">Summary</div>
-        <ul class="dash-list">
-            <li>Providing expert technical consulting in strategic initiatives, cloud migration, solution design, and product development.</li>
-        </ul>
-        <div class="summary-text">
-            Skilled in technical program management, product development, and solution architecture, with a focus on cloud technologies (Azure, AWS, GCP), Artificial Intelligence (AI), Microsoft stack (SharePoint, M365, etc.), infrastructure, application development and modernization, and data governance.
-        </div>
-        <div class="summary-text">
-            A proven leader in aligning IT strategies with business goals and driving operational efficiency across industries.
-        </div>
-
-        <!-- Core Expertise area: items exactly as shown (bold + normal mix preserved via dash list) -->
-        <div class="section-title">Core Expertise</div>
-        <ul class="expertise-wrapper">
-            <li><strong>Leadership in Technology Research, Strategy, and Innovation</strong></li>
-            <li><strong>Solution Design and Architecture</strong></li>
-            <li><strong>Artificial Intelligence and Machine Learning</strong></li>
-            <li><strong>Application Modernization</strong></li>
-            <li><strong>Application Lifecycle Development</strong></li>
-            <li><strong>Global Team and Stakeholder Management</strong></li>
-            <li>Technical Program and Project Management</li>
-            <li>FinOps Expertise</li>
-            <li>Cloud and Infrastructure Management</li>
-            <li>Infrastructure Automation and Orchestration</li>
-            <li>Compliance, Governance, and Policy Enforcement</li>
-        </ul>
-
-        <!-- Client Server: two columns preserving exact order and text from image -->
-        <div class="section-title">Client Server</div>
-        <div class="clients-grid">
-            <!-- left column clients (first half exactly as image) -->
-            <div class="client-item">Molina Healthcare, Long Beach, CA</div>
-            <div class="client-item">Wolters Kluwer, Houston TX</div>
-            <div class="client-item">AIG, Houston TX</div>
-            <div class="client-item">JP Morgan Chase, DE &amp; NY</div>
-            <div class="client-item">GE&E Oil &amp; Gas, Houston TX</div>
-            <div class="client-item">Ameriprise/(American Express), MN</div>
-            <div class="client-item">Department of Education, Albany, NY</div>
-            <div class="client-item">Rohde &amp; Schwarz, Columbia MD</div>
-            <div class="client-item">Datamatics Consultants Inc., Duluth GA</div>
-            <div class="client-item">Compaqsoft, Houston TX</div>
-            <div class="client-item">Palm Inc., Silicon Valley, CA</div>
-            <div class="client-item">IBM, Poughkeepsie, NY / Dallas, TX</div>
-            <div class="client-item">Lycos Inc., Waltham, MA</div>
-            <!-- right column continuation exactly as per original list -->
-            <div class="client-item">KAO International, Cincinnati, OH</div>
-            <div class="client-item">Virtual Edge, Houston TX</div>
-            <div class="client-item">State Transportation Dept., Houston, TX</div>
-            <div class="client-item">American Express, Consultant, Phoenix AZ</div>
-            <div class="client-item">Microsoft, Redmond WA</div>
-            <div class="client-item">Nordstrom: Seattle, Washington</div>
-            <div class="client-item">Citrix, Fort Lauderdale, Florida</div>
-            <div class="client-item">Syngenta, CA/Switzerland/Brazil</div>
-            <div class="client-item">Cisco, San Jose, CA</div>
-            <div class="client-item">Hitachi, Santa Clara, CA</div>
-            <div class="client-item">Microsoft, Redmond WA</div>
-            <div class="client-item">Bank Of America(Merrill Lynch), NJ</div>
-            <div class="client-item">DUPONT, Newark DE</div>
-        </div>
-
-        <!-- Education section: exactly from image (Master's Degree + Associate Degree, no extra items) -->
-        <div class="section-title">Education</div>
-        <div class="education-row">
-            <span class="edu-item">Master's Degree in Sciences</span>
-            <span class="edu-item">Associate Degree in Engineering</span>
-        </div>
-
-        <!-- subtle footer optional (no extra text but keeps authenticity) -->
-        <div class="small-note">20+ years consulting • Fortune 100/500 expertise</div>
+      </div>
     </div>
-</div>
+  </section>
+
+  <!-- SUMMARY -->
+  <section class="max-w-7xl mx-auto px-6 py-24">
+    <div class="grid lg:grid-cols-3 gap-12">
+
+      <div class="lg:col-span-2">
+        <h2 class="text-4xl font-bold mb-8">Professional Summary</h2>
+
+        <p class="text-slate-300 text-lg leading-9 mb-6">
+          Results-driven Technical Lead, Data Engineer, Data Architect, and DevOps strategist specializing in enterprise cloud modernization, scalable data platforms, governance, and AI-driven analytics.
+        </p>
+
+        <p class="text-slate-400 leading-9">
+          Extensive experience designing cloud-native architectures using AWS, Azure, Snowflake, Microsoft Fabric, Informatica, Spark, Talend, and Power BI. Proven success leading enterprise transformations across telecom, aerospace, retail, healthcare, manufacturing, and financial industries.
+        </p>
+      </div>
+
+      <div class="glass rounded-3xl p-8">
+        <h3 class="text-2xl font-bold mb-6 text-cyan-400">Education</h3>
+
+        <div class="space-y-5">
+          <div>
+            <h4 class="font-semibold text-lg">Master of Science</h4>
+            <p class="text-slate-400">Computer Information Systems (CIS)</p>
+          </div>
+
+          <div>
+            <h4 class="font-semibold text-lg">Specialization</h4>
+            <p class="text-slate-400">Cloud Architecture & Data Engineering</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="bg-slate-900/50 border-y border-slate-800 py-24">
+    <div class="max-w-7xl mx-auto px-6">
+
+      <div class="mb-12">
+        <h2 class="text-4xl font-bold">Core Expertise</h2>
+        <p class="text-slate-400 mt-3">Enterprise architecture, cloud migration, governance, and engineering leadership.</p>
+      </div>
+
+      <div class="flex flex-wrap gap-4">
+        <span class="px-5 py-3 rounded-2xl bg-slate-800 border border-slate-700">AWS & Azure Cloud</span>
+        <span class="px-5 py-3 rounded-2xl bg-slate-800 border border-slate-700">Snowflake & Data Warehousing</span>
+        <span class="px-5 py-3 rounded-2xl bg-slate-800 border border-slate-700">Microsoft Fabric</span>
+        <span class="px-5 py-3 rounded-2xl bg-slate-800 border border-slate-700">DevOps & Automation</span>
+        <span class="px-5 py-3 rounded-2xl bg-slate-800 border border-slate-700">Cloud Security</span>
+        <span class="px-5 py-3 rounded-2xl bg-slate-800 border border-slate-700">Power BI & Analytics</span>
+        <span class="px-5 py-3 rounded-2xl bg-slate-800 border border-slate-700">ETL & Data Pipelines</span>
+        <span class="px-5 py-3 rounded-2xl bg-slate-800 border border-slate-700">Data Governance</span>
+        <span class="px-5 py-3 rounded-2xl bg-slate-800 border border-slate-700">Terraform & Kubernetes</span>
+        <span class="px-5 py-3 rounded-2xl bg-slate-800 border border-slate-700">AI & ML Platforms</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="max-w-7xl mx-auto px-6 py-24">
+
+    <div class="mb-14">
+      <h2 class="text-4xl font-bold">Professional Experience</h2>
+      <p class="text-slate-400 mt-3">Enterprise transformation and cloud modernization leadership.</p>
+    </div>
+
+    <div class="space-y-10">
+
+      <div class="glass rounded-3xl p-8">
+        <div class="flex flex-col lg:flex-row lg:justify-between gap-4 mb-6">
+          <div>
+            <h3 class="text-2xl font-bold text-cyan-400">Enterprise BI Platform – Microsoft Fabric</h3>
+            <p class="text-slate-300 text-lg">Technical Lead / Data Architect</p>
+          </div>
+          <span class="text-slate-400">11/2024 – Present</span>
+        </div>
+
+        <ul class="space-y-3 text-slate-300 leading-8">
+          <li>▹ Architected scalable analytics platform using Microsoft Fabric and Power BI.</li>
+          <li>▹ Reduced report refresh time by 40% using Direct Lake and OneLake optimization.</li>
+          <li>▹ Implemented governance with Microsoft Purview and Entra ID.</li>
+          <li>▹ Integrated AI-driven analytics and sales forecasting capabilities.</li>
+        </ul>
+      </div>
+
+      <div class="glass rounded-3xl p-8">
+        <div class="flex flex-col lg:flex-row lg:justify-between gap-4 mb-6">
+          <div>
+            <h3 class="text-2xl font-bold text-cyan-400">Cognizant / TJX</h3>
+            <p class="text-slate-300 text-lg">Data Engineer / Technical Manager</p>
+          </div>
+          <span class="text-slate-400">04/2022 – 08/2024</span>
+        </div>
+
+        <ul class="space-y-3 text-slate-300 leading-8">
+          <li>▹ Led migration from IBM DataStage to AWS S3, Snowflake, and Talend.</li>
+          <li>▹ Managed TB-scale migration using CDC incremental load strategies.</li>
+          <li>▹ Designed secure Snowflake architecture with RBAC and IAM policies.</li>
+          <li>▹ Improved scalability, performance, and cost optimization.</li>
+        </ul>
+      </div>
+
+      <div class="glass rounded-3xl p-8">
+        <div class="flex flex-col lg:flex-row lg:justify-between gap-4 mb-6">
+          <div>
+            <h3 class="text-2xl font-bold text-cyan-400">Informatica Corporation</h3>
+            <p class="text-slate-300 text-lg">MDM & Cloud Migration Consultant</p>
+          </div>
+          <span class="text-slate-400">06/2019 – 01/2022</span>
+        </div>
+
+        <ul class="space-y-3 text-slate-300 leading-8">
+          <li>▹ Implemented MDM and governance solutions for healthcare and public sector clients.</li>
+          <li>▹ Led Azure cloud migration and Hadoop modernization initiatives.</li>
+          <li>▹ Developed automated data quality frameworks using Informatica BDQ.</li>
+          <li>▹ Implemented enterprise security and compliance controls.</li>
+        </ul>
+      </div>
+
+      <div class="glass rounded-3xl p-8">
+        <div class="flex flex-col lg:flex-row lg:justify-between gap-4 mb-6">
+          <div>
+            <h3 class="text-2xl font-bold text-cyan-400">Additional Enterprise Clients</h3>
+            <p class="text-slate-300 text-lg">Lead Data Engineer / Architect</p>
+          </div>
+          <span class="text-slate-400">2008 – 2019</span>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-4 text-slate-300">
+          <div>• Verizon</div>
+          <div>• Kroger Technology</div>
+          <div>• Hormel Foods</div>
+          <div>• T-Mobile</div>
+          <div>• Honeywell International</div>
+          <div>• Seagate Technology</div>
+          <div>• HISD</div>
+          <div>• Wolters Kluwer</div>
+          <div>• Key Energy Services</div>
+          <div>• Pratt & Whitney</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section class="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border-y border-slate-800 py-24">
+
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-16">
+
+        <div>
+          <h2 class="text-4xl font-bold mb-10">Certifications</h2>
+
+          <div class="space-y-4">
+            <div class="glass rounded-2xl p-5">AWS Certified DevOps Engineer – Professional</div>
+            <div class="glass rounded-2xl p-5">AWS Certified Security – Specialty</div>
+            <div class="glass rounded-2xl p-5">AWS Certified Solutions Architect – Associate</div>
+            <div class="glass rounded-2xl p-5">Snowflake SnowPro Core Certified</div>
+            <div class="glass rounded-2xl p-5">Informatica Certified PowerCenter Data Integrator</div>
+            <div class="glass rounded-2xl p-5">Informatica Certified Data Quality Developer Specialist</div>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-4xl font-bold mb-10">Technical Stack</h2>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+
+            <div class="glass rounded-2xl p-5">
+              <h3 class="font-bold text-cyan-400 mb-2">Cloud</h3>
+              <p class="text-slate-300">AWS, Azure, Microsoft Fabric</p>
+            </div>
+
+            <div class="glass rounded-2xl p-5">
+              <h3 class="font-bold text-cyan-400 mb-2">Data Engineering</h3>
+              <p class="text-slate-300">Snowflake, Spark, Hadoop, Airflow</p>
+            </div>
+
+            <div class="glass rounded-2xl p-5">
+              <h3 class="font-bold text-cyan-400 mb-2">ETL Tools</h3>
+              <p class="text-slate-300">Informatica, Talend, SSIS, DataStage</p>
+            </div>
+
+            <div class="glass rounded-2xl p-5">
+              <h3 class="font-bold text-cyan-400 mb-2">Programming</h3>
+              <p class="text-slate-300">Python, Scala, Java, SQL, Bash</p>
+            </div>
+
+            <div class="glass rounded-2xl p-5">
+              <h3 class="font-bold text-cyan-400 mb-2">DevOps</h3>
+              <p class="text-slate-300">Docker, Kubernetes, Terraform</p>
+            </div>
+
+            <div class="glass rounded-2xl p-5">
+              <h3 class="font-bold text-cyan-400 mb-2">Analytics</h3>
+              <p class="text-slate-300">Power BI, Tableau, Azure ML</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-slate-800 py-12">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row justify-between items-center gap-6">
+
+      <div>
+        <h3 class="text-2xl font-bold">Jahangir Roni</h3>
+        <p class="text-slate-400 mt-2">Cloud Architect • Data Engineer • DevOps Strategist</p>
+      </div>
+
+      <div class="flex flex-wrap justify-center gap-6 text-slate-400">
+        <a href="mailto:jroni5143@gmail.com" class="hover:text-cyan-400 transition">
+          jroni5143@gmail.com
+        </a>
+
+        <a href="https://linkedin.com/in/Jroni5143" target="_blank" class="hover:text-cyan-400 transition">
+          LinkedIn
+        </a>
+
+        <a href="https://www.credly.com/users/jahangir-roni" target="_blank" class="hover:text-cyan-400 transition">
+          Credly
+        </a>
+
+        <a href="https://jahangirroni.github.io" target="_blank" class="hover:text-cyan-400 transition">
+          jahangirroni.github.io
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
 </body>
 </html>
