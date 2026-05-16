@@ -75,21 +75,27 @@
         }
 
         /* ===== DARK BLUE BOXES FOR SECTION TITLES ONLY ===== */
-        /* All titles have exact same width (260px), single line, dark blue background, white text */
+        /* ALL boxes: equal width (280px), equal height (48px), single line, white text, centered vertically */
+        .section-title-wrapper {
+            margin: 1.8rem 0 1rem 0;
+        }
+        
         .section-title {
-            font-size: 18px;
+            font-size: 17px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1px;
             background-color: #0a2f4d;
             color: #ffffff;
-            padding: 12px 20px;
-            margin: 1.8rem 0 1rem 0;
-            width: 260px;
-            text-align: left;
-            display: block;
+            width: 280px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0 20px;
             border: none;
             box-shadow: none;
+            line-height: 1.2;
         }
 
         /* Content styling - NO BACKGROUND, normal dark text */
@@ -192,9 +198,9 @@
                 text-align: center;
             }
             .section-title {
-                width: 240px;
-                font-size: 16px;
-                padding: 10px 16px;
+                width: 260px;
+                height: 44px;
+                font-size: 15px;
             }
         }
 
@@ -236,8 +242,10 @@
             AWS Certified DevOps Engineer & Security Specialty professional with <strong>16+ years of experience</strong> delivering enterprise cloud transformation, data modernization, DevOps automation, security compliance, and governance solutions for Fortune 100/500 organizations.
         </div>
 
-        <!-- ===== SECTION 1: SUMMARY (Dark blue box on title only, single line) ===== -->
-        <div class="section-title">Summary</div>
+        <!-- ===== SECTION 1: SUMMARY (Dark blue box - equal width 280px, equal height 48px) ===== -->
+        <div class="section-title-wrapper">
+            <div class="section-title">Summary</div>
+        </div>
         <div class="summary-plain">
             Results-driven Cloud Architect and Technical Leader with validated expertise in AWS, Azure, Microsoft Fabric, DevOps, data engineering, and <strong>cloud security (AWS Security Specialty)</strong>. Proven track record designing scalable, secure, and compliant enterprise platforms aligned with <strong>GDPR, HIPAA, and SOC2</strong> frameworks.
         </div>
@@ -245,8 +253,10 @@
             Specialized in cloud migration, enterprise data architecture, ETL/ELT modernization, infrastructure automation, <strong>DevSecOps</strong>, governance, and AI-driven analytics.
         </div>
 
-        <!-- ===== SECTION 2: CORE EXPERTISE (Dark blue box on title only, single line) ===== -->
-        <div class="section-title">Core Expertise</div>
+        <!-- ===== SECTION 2: CORE EXPERTISE (Dark blue box - equal width 280px, equal height 48px) ===== -->
+        <div class="section-title-wrapper">
+            <div class="section-title">Core Expertise</div>
+        </div>
         <ul class="expertise-grid">
             <li>Enterprise Cloud Architecture (AWS, Azure, Microsoft Fabric)</li>
             <li>Cloud Migration & Infrastructure Modernization</li>
@@ -262,8 +272,10 @@
             <li>Technical Leadership, Solution Design & Global Delivery</li>
         </ul>
 
-        <!-- ===== SECTION 3: CLIENTS SERVED (Dark blue box on title only, single line) ===== -->
-        <div class="section-title">Clients Served</div>
+        <!-- ===== SECTION 3: CLIENTS SERVED (Dark blue box - equal width 280px, equal height 48px) ===== -->
+        <div class="section-title-wrapper">
+            <div class="section-title">Clients Served</div>
+        </div>
         <div class="clients-two">
             <div class="client-entry">(Confidential) – Power BI & Microsoft Fabric</div>
             <div class="client-entry">Cognizant – TJX, Massachusetts</div>
@@ -281,8 +293,10 @@
             <div class="client-entry">Pratt & Whitney – Azure Migration Consultant</div>
         </div>
 
-        <!-- ===== SECTION 4: EDUCATION & CERTIFICATIONS (Dark blue box on title only, single line) ===== -->
-        <div class="section-title">Education & Certifications</div>
+        <!-- ===== SECTION 4: EDUCATION & CERTIFICATIONS (Dark blue box - equal width 280px, equal height 48px) ===== -->
+        <div class="section-title-wrapper">
+            <div class="section-title">Education & Certifications</div>
+        </div>
         <ul class="edu-cert-grid">
             <li><strong>🎓 Education:</strong> Master of Science (MS) – Computer Information Systems (CIS)</li>
             <li><strong>🔐 AWS Certified DevOps Engineer – Professional</strong></li>
