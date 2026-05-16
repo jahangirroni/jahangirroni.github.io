@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Jahangir R. - Strategist | DevOps | Cloud Security | Data Engineer | GRC | Technical Manager | Solution Architect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jahangir R. - Professional Resume</title>
     <style>
         * {
             margin: 0;
@@ -14,21 +14,20 @@
         body {
             background: #eef2f5;
             font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
-            line-height: 1.45;
+            line-height: 1.5;
             color: #1a2c3c;
             padding: 40px 24px;
         }
 
         .resume-card {
-            max-width: 1100px;
+            max-width: 1000px;
             margin: 0 auto;
             background: #ffffff;
             box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
-            border-radius: 0px;
         }
 
         .resume-inner {
-            padding: 2.2rem 2.5rem 2.5rem 2.5rem;
+            padding: 2.5rem 2.8rem 3rem 2.8rem;
         }
 
         /* Header */
@@ -36,11 +35,10 @@
             font-size: 38px;
             font-weight: 700;
             color: #0a2c3e;
-            letter-spacing: -0.3px;
-            margin: 0 0 12px 0;
+            margin: 0 0 15px 0;
             border-bottom: 2px solid #dce7f0;
             display: inline-block;
-            padding-bottom: 5px;
+            padding-bottom: 6px;
         }
 
         .contact-strip {
@@ -49,26 +47,23 @@
             justify-content: space-between;
             align-items: baseline;
             background: #f9fbfd;
-            padding: 12px 15px;
-            margin: 10px 0 8px 0;
+            padding: 14px 18px;
+            margin: 12px 0 10px 0;
             border-radius: 12px;
             border: 1px solid #e2eaf1;
         }
 
         .location {
-            font-size: 13px;
+            font-size: 13.5px;
             font-weight: 500;
             color: #2c4c6c;
-            display: flex;
-            align-items: center;
-            gap: 6px;
         }
 
         .contact-links {
             display: flex;
             flex-wrap: wrap;
-            gap: 18px;
-            font-size: 13px;
+            gap: 22px;
+            font-size: 13.5px;
         }
 
         .contact-links a {
@@ -77,29 +72,23 @@
             border-bottom: 0.5px dotted #b9d0e2;
         }
 
-        .contact-links a:hover {
-            border-bottom: 0.5px solid #1f6e8c;
-        }
-
         /* Role title */
         .role-title {
-            font-size: 19px;
+            font-size: 20px;
             font-weight: 700;
             background: #f0f6fc;
-            padding: 12px 18px;
-            margin: 20px 0 16px 0;
+            padding: 14px 20px;
+            margin: 22px 0 18px 0;
             color: #1d5a7a;
             border-left: 5px solid #2c7da0;
-            letter-spacing: -0.2px;
         }
 
         .desc-text {
             font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 18px;
+            line-height: 1.55;
+            margin-bottom: 20px;
             color: #1f313f;
-            background: white;
-            padding: 4px 0;
+            padding: 6px 0;
         }
 
         /* Section titles */
@@ -107,11 +96,11 @@
             font-size: 18px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.8px;
+            letter-spacing: 1px;
             color: #134b6b;
             border-bottom: 2.5px solid #d4e2ef;
-            padding-bottom: 5px;
-            margin: 1.3rem 0 0.9rem 0;
+            padding-bottom: 6px;
+            margin: 1.6rem 0 1.1rem 0;
         }
 
         /* Dash bullet list */
@@ -120,11 +109,11 @@
             padding-left: 0;
         }
         .dash-list li {
-            font-size: 13.8px;
-            padding-left: 22px;
+            font-size: 14px;
+            padding-left: 24px;
             position: relative;
-            margin-bottom: 10px;
-            line-height: 1.48;
+            margin-bottom: 12px;
+            line-height: 1.5;
             color: #1f3243;
         }
         .dash-list li::before {
@@ -133,79 +122,75 @@
             left: 0;
             color: #2c7a47;
             font-weight: 500;
-            font-size: 14px;
         }
 
         .summary-plain {
-            font-size: 13.8px;
-            line-height: 1.5;
-            margin: 8px 0 8px 0;
+            font-size: 14px;
+            line-height: 1.55;
+            margin: 12px 0 12px 0;
             color: #1f3243;
         }
 
-        /* Two column grid for Core Expertise */
+        /* Two column grid */
         .expertise-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 8px 30px;
+            gap: 10px 35px;
             list-style: none;
             padding-left: 0;
-            margin-top: 6px;
+            margin-top: 8px;
         }
         .expertise-grid li {
-            font-size: 13.5px;
-            padding-left: 22px;
+            font-size: 13.8px;
+            padding-left: 24px;
             position: relative;
-            margin-bottom: 7px;
-            line-height: 1.44;
+            margin-bottom: 9px;
+            line-height: 1.48;
         }
         .expertise-grid li::before {
             content: "—";
             position: absolute;
             left: 0;
             color: #2c7a47;
-            font-weight: 500;
         }
         .expertise-grid strong {
             color: #1a4c6e;
         }
 
-        /* Client Server two column */
+        /* Clients two column */
         .clients-two {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 6px 35px;
-            margin-top: 8px;
+            gap: 8px 40px;
+            margin-top: 10px;
         }
         .client-entry {
-            font-size: 13.2px;
-            padding-left: 22px;
+            font-size: 13.5px;
+            padding-left: 24px;
             position: relative;
-            line-height: 1.45;
-            margin-bottom: 5px;
-            break-inside: avoid;
+            line-height: 1.48;
+            margin-bottom: 7px;
         }
         .client-entry::before {
             content: "—";
             position: absolute;
             left: 0;
             color: #2c7a47;
-            font-weight: 500;
         }
 
         /* Education row */
         .education-row {
             display: flex;
             flex-wrap: wrap;
-            gap: 20px 40px;
-            margin: 12px 0 10px 0;
+            gap: 25px 45px;
+            margin: 14px 0 12px 0;
             padding: 6px 0;
         }
         .edu-item {
-            font-size: 13.5px;
+            font-size: 13.8px;
             font-weight: 500;
             color: #1a5a7a;
-            padding-left: 22px;
+            padding-left: 24px;
             position: relative;
         }
         .edu-item::before {
@@ -213,22 +198,20 @@
             position: absolute;
             left: 0;
             color: #2c7a47;
-            font-weight: 700;
         }
 
-        /* Certifications sub-section */
         .cert-row {
             display: flex;
             flex-wrap: wrap;
-            gap: 16px 35px;
+            gap: 20px 40px;
             margin: 8px 0 5px 0;
             padding: 4px 0;
         }
         .cert-item {
-            font-size: 13.2px;
+            font-size: 13.5px;
             font-weight: 500;
             color: #1a5a7a;
-            padding-left: 22px;
+            padding-left: 24px;
             position: relative;
         }
         .cert-item::before {
@@ -236,7 +219,6 @@
             position: absolute;
             left: 0;
             color: #2c7a47;
-            font-weight: 700;
         }
 
         @media (max-width: 780px) {
@@ -254,26 +236,6 @@
                 flex-direction: column;
                 gap: 10px;
             }
-            .name-header h1 {
-                font-size: 30px;
-            }
-        }
-
-        @media print {
-            body {
-                background: white;
-                padding: 0;
-                margin: 0;
-            }
-            .resume-card {
-                box-shadow: none;
-                max-width: 100%;
-            }
-            .role-title {
-                background: #f5f9fe;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
         }
     </style>
 </head>
@@ -290,21 +252,21 @@
             <div class="contact-links">
                 <span>📞 281-234-5536</span>
                 <span>✉️ <a href="mailto:jahangir.roni01@gmail.com">jahangir.roni01@gmail.com</a></span>
-                <span>🌐 <a href="https://www.jahangirr.com" target="_blank">www.jahangirr.com</a></span>
+                <span>🌐 <a href="https://www.jahangirr.com">www.jahangirr.com</a></span>
             </div>
         </div>
 
-        <!-- Title Line -->
+        <!-- Title -->
         <div class="role-title">
             Strategist | DevOps | Cloud Security | Data Engineer | GRC | Technical Manager | Solution Architect
         </div>
 
-        <!-- Intro line -->
+        <!-- Intro -->
         <div class="desc-text">
             Technology professional with 16+ years of consulting experience, delivering enterprise-scale cloud, data, and modernization solutions for USA-based clients and Fortune 100/500 organizations.
         </div>
 
-        <!-- ===== SECTION 1: SUMMARY ===== -->
+        <!-- SUMMARY -->
         <div class="section-title">Summary</div>
         <ul class="dash-list">
             <li>Senior technology leader specializing in cloud architecture, data engineering, DevOps, and enterprise modernization. Proven experience in designing scalable, secure, and cost-efficient enterprise solutions across complex environments.</li>
@@ -313,7 +275,7 @@
             Cloud migration & modernization (AWS, Azure, Microsoft Fabric) | Enterprise data architecture & analytics platforms | DevOps automation & infrastructure as code | Data governance, security & compliance (GDPR, HIPAA) | ETL/ELT pipeline design & optimization | Technical leadership across global teams.
         </div>
 
-        <!-- ===== SECTION 2: CORE EXPERTISE ===== -->
+        <!-- CORE EXPERTISE -->
         <div class="section-title">Core Expertise</div>
         <ul class="expertise-grid">
             <li><strong>Cloud Platforms:</strong> AWS, Azure, Microsoft Fabric</li>
@@ -326,7 +288,7 @@
             <li><strong>Analytics:</strong> Power BI, Azure ML, AI-driven analytics</li>
         </ul>
 
-        <!-- ===== SECTION 3: CLIENTS SERVED ===== -->
+        <!-- CLIENTS SERVED -->
         <div class="section-title">Clients Served</div>
         <div class="clients-two">
             <div class="client-entry">(Confidential) – Power BI & Microsoft Fabric BI Solution (11/2024 – Present)</div>
@@ -336,7 +298,7 @@
             <div class="client-entry">Kroger Technology – Data Architect Consultant (06/2018 – 05/2019)</div>
             <div class="client-entry">Hormel Foods – Data Warehouse Modernization (01/2017 – 06/2018)</div>
             <div class="client-entry">Verizon – XO Migration, Data Migration Lead</div>
-            <div class="client-entry">T-Mobile – Lead Data Engineer / ETL & IDQ Developer, Seattle WA</div>
+            <div class="client-entry">T-Mobile – Lead Data Engineer / ETL & IDQ Developer</div>
             <div class="client-entry">Seagate Technology – Lead Informatica Developer, Bloomington MN</div>
             <div class="client-entry">Houston ISD – MDM / Data Quality Engineer, Houston TX</div>
             <div class="client-entry">Key Energy Services – Lead ETL / Informatica Developer, Houston TX</div>
@@ -345,7 +307,7 @@
             <div class="client-entry">Pratt & Whitney – Azure Migration Consultant</div>
         </div>
 
-        <!-- ===== SECTION 4: EDUCATION & CERTIFICATIONS ===== -->
+        <!-- EDUCATION & CERTIFICATIONS -->
         <div class="section-title">Education & Certifications</div>
         <div class="education-row">
             <span class="edu-item">Master of Science (MS) – Computer Information Systems (CIS)</span>
